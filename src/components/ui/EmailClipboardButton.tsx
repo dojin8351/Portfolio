@@ -1,6 +1,7 @@
 'use client'
 
 import {Mail} from "lucide-react";
+import {toast} from "sonner";
 
 interface EmailClipboardButtonProps {
   email : string
@@ -9,6 +10,7 @@ interface EmailClipboardButtonProps {
 export default function EmailClipboardButton({email}: EmailClipboardButtonProps) {
   const copy = () => {
     navigator.clipboard.writeText(email)
+    toast.success("이메일이 복사되었습니다.")
   }
   
   return (

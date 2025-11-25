@@ -1,7 +1,7 @@
-import ProfileAvatar from "@/components/ProfileAvatar";
+import ProfileAvatar from "@/components/ui/ProfileAvatar";
 import {AboutMeType} from "@/types/aboutMe";
-import EmailClipboardButton from "@/components/EmailClipboardButton";
-import GitHubLinkButton from "@/components/GitHubLinkButton";
+import EmailClipboardButton from "@/components/ui/EmailClipboardButton";
+import GitHubLinkButton from "@/components/ui/GitHubLinkButton";
 interface AboutMeProps {
   aboutMeInfo : AboutMeType
 }
@@ -9,12 +9,12 @@ interface AboutMeProps {
 export default function AboutMeSection({aboutMeInfo} : AboutMeProps) {
   return(
   <div className={'flex flex-col w-full'}>
-    <div className={'flex flex-col items-center sm:flex-row sm:items-center gap-6 sm:gap-10 w-full'}>
+    <div className={'flex flex-col items-center sm:flex-row sm:items-center gap-4 sm:gap-6 md:gap-10 w-full'}>
       <ProfileAvatar src={aboutMeInfo?.src} />
       <div className={'flex flex-col font-semibold dark:text-white gap-2 w-full sm:w-auto'}>
         <h1 className={'text-xl sm:text-2xl md:text-h1 leading-tight break-words'}>
           <span>안녕하세요,</span>{' '}
-          <span className={'sm:whitespace-nowrap'}>
+          <span className={'inline-block sm:inline'}>
             <span>{aboutMeInfo?.job}</span>{' '}
             <span>개발자</span>{' '}
             <span className={'text-blue-400'}>{aboutMeInfo?.name}</span>

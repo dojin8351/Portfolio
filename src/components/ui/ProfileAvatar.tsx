@@ -6,7 +6,7 @@ interface ProfileAvatarProps {
 
 export default function ProfileAvatar({src} : ProfileAvatarProps) {
   return (
-    <div className={'relative w-32 h-32 sm:w-40 sm:h-40 shrink-0 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700'}>
+    <div className={'hidden sm:flex relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 shrink-0 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700'}>
       <Image 
         src={src} 
         alt="Profile" 
