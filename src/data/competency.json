@@ -1,0 +1,25 @@
+{
+  "competencies": [
+    {
+      "title": "모던 프론트엔드 개발",
+      "description": "React.js를 이용한 프론트엔드 개발경험이 있으며, Javascript(ES6), typescript에 능숙합니다. Next.js와 더불어 핵심적인 React library 활용 경험이 있습니다.",
+      "logos": [
+        { "src": "/logos/frontend/React.svg", "alt": "React Logo" },
+        { "src": "/logos/frontend/Next.js.svg", "alt": "Next.js Logo" },
+        { "src": "/logos/frontend/TypeScript.svg", "alt": "TypeScript Logo" },
+        { "src": "/logos/frontend/JavaScript.svg", "alt": "JavaScript Logo" }
+      ]
+    },
+    {
+      "title": "커뮤니케이션 및 협업",
+      "description": "Github 이용한 협업 경험이 있으며, Jira, Slack, Notion 등의 협업 도구 사용 경험도 있습니다. 기획, 디자인, 총무 등 다양한 직무 경험을 기반으로 다른 직군과 원활한 커뮤니케이션이 가능합니다.",
+      "logos": [
+        { "src": "/logos/collaboration/Figma.svg", "alt": "Figma Logo" },
+        { "src": "/logos/collaboration/Jira.svg", "alt": "Jira Logo" },
+        { "src": "/logos/collaboration/GitHub.svg", "alt": "GitHub Logo" },
+        { "src": "/logos/collaboration/GitLab.svg", "alt": "GitLab Logo" }
+      ]
+    }
+  ]
+}
+

@@ -1,4 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a4c28cd0-721d-4daf-95b0-d4942348d18f" name="변경" comment="feat : 자기소개, 역량, 기술 섹션 추가">
+      <change afterPath="$PROJECT_DIR$/public/bijeuniseu-salam-eul-gajanghaneun-gwiyeoun-gang-aji.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/backend/IntelliJ IDEA.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/backend/Java.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/backend/MongoDB.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/backend/MySQL.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/backend/PostgresSQL.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/backend/Redis.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/backend/Spring.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/ESLint.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/Figma.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/GitHub.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/GitLab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/Jira.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/Postman.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/Sourcetree.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/collaboration/Swagger.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/CSS3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/HTML5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/JavaScript.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/Next.js.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/Node.js.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/React.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/Tailwind CSS.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/frontend/TypeScript.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CompetencyCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EmailClipboardButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GitHubLinkButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProfileAvatar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SkillsCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ThemeToggleButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/AboutMeSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/CompetencySection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/SkillSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/aboutMe.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/competency.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/skills.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useTheme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/aboutMe.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/common.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/competency.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dojin8351&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dojin8351/Portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;e3ce9af1-70ec-49af-9b28-c053c0ad5529&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="35ut3lYCjXiHf8K8NT4gdW6ajjV" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/SSAFY/Desktop/workspace/portfolio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\SSAFY\\Desktop\\workspace\\portfolio\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SSAFY\Desktop\workspace\portfolio\public\logos\backend" />
+      <recent name="C:\Users\SSAFY\Desktop\workspace\portfolio\public\logo\frontend" />
+      <recent name="C:\Users\SSAFY\Desktop\workspace\portfolio\public\logo\collaboration" />
+      <recent name="C:\Users\SSAFY\Desktop\workspace\portfolio\public\logo\backend" />
+      <recent name="C:\Users\SSAFY\Desktop\workspace\portfolio\public\logo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: 서버 측">
+    <configuration name="Next.js: 클라이언트 측에서 디버그" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: 서버 측" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="a4c28cd0-721d-4daf-95b0-d4942348d18f" name="변경" comment="" />
+      <created>1763971587894</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763971587894</updated>
+      <workItem from="1763971589662" duration="690000" />
+      <workItem from="1764029538159" duration="24728000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat : 자기소개, 역량, 기술 섹션 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : 자기소개, 역량, 기술 섹션 추가" />
+  </component>
 </project>

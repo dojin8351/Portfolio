@@ -1,0 +1,44 @@
+{
+  "skills": [
+    {
+      "title" : "프론트엔드",
+      "logos" : [
+        { "src": "/logos/frontend/React.svg", "alt": "React Logo" },
+        { "src": "/logos/frontend/Next.js.svg", "alt": "Next.js Logo" },
+        { "src": "/logos/frontend/TypeScript.svg", "alt": "TypeScript Logo" },
+        { "src": "/logos/frontend/JavaScript.svg", "alt": "JavaScript Logo" },
+        { "src": "/logos/frontend/HTML5.svg", "alt": "HTML Logo"},
+        { "src": "/logos/frontend/CSS3.svg", "alt": "HTML Logo"},
+        { "src": "/logos/frontend/Node.js.svg", "alt": "HTML Logo"},
+        { "src": "/logos/frontend/Tailwind Css.svg", "alt": "HTML Logo"}
+      ]
+    },
+    {
+      "title" : "백엔드",
+      "logos" : [
+        { "src": "/logos/backend/IntelliJ IDEA.svg", "alt": "React Logo" },
+        { "src": "/logos/backend/Java.svg", "alt": "Next.js Logo" },
+        { "src": "/logos/backend/PostGresSQL.svg", "alt": "TypeScript Logo" },
+        { "src": "/logos/backend/MySQL.svg", "alt": "JavaScript Logo" },
+        { "src": "/logos/backend/Redis.svg", "alt": "HTML Logo"},
+        { "src": "/logos/backend/Spring.svg", "alt": "HTML Logo"},
+        { "src": "/logos/backend/MongoDB.svg", "alt": "HTML Logo"}
+      ]
+
+    },
+    {
+      "title" : "협업",
+      "logos" : [
+        { "src": "/logos/collaboration/Figma.svg", "alt": "React Logo" },
+        { "src": "/logos/collaboration/GitHub.svg", "alt": "Next.js Logo" },
+        { "src": "/logos/collaboration/GitLab.svg", "alt": "TypeScript Logo" },
+        { "src": "/logos/collaboration/Jira.svg", "alt": "JavaScript Logo" },
+        { "src": "/logos/collaboration/Postman.svg", "alt": "HTML Logo"},
+        { "src": "/logos/collaboration/Sourcetree.svg", "alt": "HTML Logo"},
+        { "src": "/logos/collaboration/Swagger.svg", "alt": "HTML Logo"}
+
+      ]
+
+    }
+  ]
+}

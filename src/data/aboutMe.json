@@ -1,0 +1,13 @@
+{
+  "name" : "김도현",
+  "profileImg" : "/bijeuniseu-salam-eul-gajanghaneun-gwiyeoun-gang-aji.jpg",
+  "job" : "프론트엔드",
+  "githubLink" : "https://github.com/dojin8351",
+  "email" : "dojin8351@gmail.com",
+  "introductions" : [
+    "React.js와 Next.js를 활용한 모던 웹 애플리케이션 개발 경험이 있습니다.",
+    "TypeScript와 JavaScript(ES6+)를 활용한 타입 안정성 있는 코드 작성에 능숙합니다.",
+    "다양한 직무 경험을 바탕으로 기획자, 디자이너와의 원활한 협업이 가능합니다.",
+    "지속적인 학습과 성장을 통해 사용자 경험을 개선하는 개발을 추구합니다."
+  ]
+}
