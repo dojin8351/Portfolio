@@ -10,7 +10,7 @@ export default function ProfileAvatar({src} : ProfileAvatarProps) {
       <Image 
         src={src} 
         alt="Profile" 
-        fill 
+        fill
         className="object-cover" 
         sizes="(max-width: 640px) 128px, 160px"
         priority

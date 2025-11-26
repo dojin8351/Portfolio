@@ -10,7 +10,7 @@
         { "src": "/logos/frontend/HTML5.svg", "alt": "HTML Logo"},
         { "src": "/logos/frontend/CSS3.svg", "alt": "HTML Logo"},
         { "src": "/logos/frontend/Node.js.svg", "alt": "HTML Logo"},
-        { "src": "/logos/frontend/Tailwind Css.svg", "alt": "HTML Logo"}
+        { "src": "/logos/frontend/Tailwind CSS.svg", "alt": "HTML Logo"}
       ]
     },
     {
@@ -18,7 +18,7 @@
       "logos" : [
         { "src": "/logos/backend/IntelliJ IDEA.svg", "alt": "React Logo" },
         { "src": "/logos/backend/Java.svg", "alt": "Next.js Logo" },
-        { "src": "/logos/backend/PostGresSQL.svg", "alt": "TypeScript Logo" },
+        { "src": "/logos/backend/PostgresSQL.svg", "alt": "TypeScript Logo" },
         { "src": "/logos/backend/MySQL.svg", "alt": "JavaScript Logo" },
         { "src": "/logos/backend/Redis.svg", "alt": "HTML Logo"},
         { "src": "/logos/backend/Spring.svg", "alt": "HTML Logo"},

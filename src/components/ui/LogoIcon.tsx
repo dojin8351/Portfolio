@@ -35,6 +35,8 @@ export default function LogoIcon({
           width={size}
           height={size}
           className="object-contain"
+          sizes={`${size}px`}
+          loading="lazy"
         />
       </div>
     </div>

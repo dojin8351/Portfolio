@@ -5,7 +5,11 @@ import CompetencySection from "@/components/layouts/CompetencySection";
 import SkillSection from "@/components/layouts/SkillSection";
 import {Toaster} from "sonner";
 import ProjectSection from "@/components/layouts/ProjectSection";
-import FloatingNavigation from "@/components/ui/FloatingNavigation";
+import dynamic from "next/dynamic";
+
+const FloatingNavigation = dynamic(
+  () => import("@/components/layouts/FloatingNavigation")
+);
 
 export default function Home() {
   const aboutMeInfo = {

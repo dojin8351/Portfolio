@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeader from "@/components/ui/SectionHeader";
+import SectionHeader from "@/components/layouts/SectionHeader";
 
 interface SectionLayoutProps {
   title: string

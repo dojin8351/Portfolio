@@ -1,5 +1,5 @@
 import SectionLayout from "@/components/layouts/SectionLayout";
-import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectCard from "@/components/project/ProjectCard";
 import projectData from "@/data/project.json";
 import { ProjectData } from "@/types/project";
 

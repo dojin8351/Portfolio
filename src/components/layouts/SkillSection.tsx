@@ -1,6 +1,6 @@
 import {SkillData} from "@/types/competency";
 import skillsData from "@/data/skills.json";
-import SkillsCard from "@/components/ui/SkillsCard";
+import SkillsCard from "@/components/skill/SkillsCard";
 import SectionLayout from "@/components/layouts/SectionLayout";
 
 export default function SkillSection() {

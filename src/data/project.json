@@ -190,18 +190,14 @@
       "projectDescription" : [
         {
           "id": 1,
-          "content": "Next.js 16 App Router 기반 현대적 아키텍처 : Server-Side Rendering을 통한 빠른 초기 로딩과 검색엔진 최적화. App Router의 파일 기반 라우팅과 Server/Client Component 분리로 성능과 개발 경험 향상. TypeScript 5와 React 19를 활용한 타입 안정성과 최신 기능 활용"
-        },
-        {
-          "id": 2,
           "content": "JSON 기반 데이터 관리 시스템 : 프로젝트 정보, 자기소개, 기술 스택을 JSON 파일로 관리하여 비개발자도 쉽게 내용 수정 가능. TypeScript 타입 정의로 데이터 구조 명확화 및 실수 방지. 코드 수정 없이 데이터만 업데이트하여 즉시 반영되는 구조 설계"
         },
         {
-          "id": 3,
+          "id": 2,
           "content": "SEO 최적화 구현 : Next.js Metadata API를 활용한 동적 메타데이터 생성 (title, description, keywords, Open Graph, Twitter Card). Schema.org Person 스키마를 활용한 JSON-LD 구조화된 데이터로 검색엔진 이해도 향상. robots.txt와 sitemap.xml 자동 생성으로 검색엔진 크롤링 최적화"
         },
         {
-          "id": 4,
+          "id": 3,
           "content": "접근성과 사용자 경험 최적화 : Tailwind CSS 4 기반 완전 반응형 디자인으로 모든 디바이스에서 최적화된 경험 제공. localStorage 기반 다크모드 지원 및 FOUC 방지 스크립트 적용. Radix UI를 활용한 키보드 네비게이션 및 스크린 리더 지원으로 접근성 향상"
         }
       ],

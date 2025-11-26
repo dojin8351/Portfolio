@@ -1,7 +1,7 @@
-import ProfileAvatar from "@/components/ui/ProfileAvatar";
+import ProfileAvatar from "@/components/about-me/ProfileAvatar";
 import {AboutMeType} from "@/types/aboutMe";
-import EmailClipboardButton from "@/components/ui/EmailClipboardButton";
-import GitHubLinkButton from "@/components/ui/GitHubLinkButton";
+import EmailClipboardButton from "@/components/about-me/EmailClipboardButton";
+import GitHubLinkButton from "@/components/about-me/GitHubLinkButton";
 interface AboutMeProps {
   aboutMeInfo : AboutMeType
 }

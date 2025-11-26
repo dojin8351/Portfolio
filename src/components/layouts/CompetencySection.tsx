@@ -1,4 +1,4 @@
-import CompetencyCard from "@/components/ui/CompetencyCard";
+import CompetencyCard from "@/components/competency/CompetencyCard";
 import competencyData from "@/data/competency.json";
 import { CompetencyData } from "@/types/competency";
 import SectionLayout from "@/components/layouts/SectionLayout";
