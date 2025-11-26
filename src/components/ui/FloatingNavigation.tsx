@@ -1,8 +1,21 @@
 'use client'
 
-import ThemeToggleButton from "@/components/ui/ThemeToggleButton";
+import { useEffect, useState } from 'react';
+import ThemeToggleButton from './ThemeToggleButton';
 
-export default function Header() {
+export default function FloatingNavigation() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsVisible(scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -10,9 +23,12 @@ export default function Header() {
     }
   };
 
+  if (!isVisible) return null;
+
   return (
-    <div className="w-full 
+    <div className="fixed top-0 left-0 right-0 z-50 
                     bg-white/80 dark:bg-gray-900/80 
+                    backdrop-blur-lg
                     border-b border-gray-200/50 dark:border-gray-700/50
                     shadow-sm
                     transition-all duration-300">
@@ -27,7 +43,7 @@ export default function Header() {
           Portfolio
         </p>
         <div className="flex flex-row gap-2 sm:gap-5 justify-between items-center">
-          <div className="hidden sm:flex flex-row gap-3 sm:gap-5 font-medium dark:text-white">
+          <div className="flex flex-row gap-3 sm:gap-5 font-medium dark:text-white">
             <p 
               className="cursor-pointer hover:text-blue-500 text-sm sm:text-base transition-colors"
               onClick={() => scrollToSection('about-me')}
@@ -59,5 +75,6 @@ export default function Header() {
         </div>
       </div>
     </div>
-  )
+  );
 }
+

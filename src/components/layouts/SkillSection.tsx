@@ -6,7 +6,7 @@ import SectionLayout from "@/components/layouts/SectionLayout";
 export default function SkillSection() {
   const data = skillsData as SkillData;
   return (
-    <SectionLayout title={'기술'}>
+    <SectionLayout title={'기술'} sectionId="skills">
       <div className="flex flex-col justify-center gap-2 mt-3 w-full
               sm:flex-row sm:flex-wrap sm:gap-6
               md:gap-10 ">

@@ -7,7 +7,7 @@ export default function CompetencySection() {
   const data = competencyData as CompetencyData;
 
   return (
-   <SectionLayout title={'역량'}>
+   <SectionLayout title={'역량'} sectionId="competency">
       <div className={'flex flex-col gap-10 mt-10 w-full'}>
         {data.competencies.map((competency, index) => (
           <CompetencyCard

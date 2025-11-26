@@ -8,7 +8,7 @@ interface AboutMeProps {
 
 export default function AboutMeSection({aboutMeInfo} : AboutMeProps) {
   return(
-  <div className={'flex flex-col w-full mb-10 items-center justify-center'}>
+  <div id="about-me" className={'flex flex-col w-full mb-10 items-center justify-center scroll-mt-20'}>
     <div className={'flex flex-col items-center sm:flex-row sm:items-center gap-4 sm:gap-6 md:gap-10 w-full'}>
       <ProfileAvatar src={aboutMeInfo?.src} />
       <div className={'flex flex-col font-semibold dark:text-white gap-2 w-full sm:w-auto'}>

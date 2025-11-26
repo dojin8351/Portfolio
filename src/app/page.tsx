@@ -5,6 +5,7 @@ import CompetencySection from "@/components/layouts/CompetencySection";
 import SkillSection from "@/components/layouts/SkillSection";
 import {Toaster} from "sonner";
 import ProjectSection from "@/components/layouts/ProjectSection";
+import FloatingNavigation from "@/components/ui/FloatingNavigation";
 
 export default function Home() {
   const aboutMeInfo = {
@@ -20,6 +21,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans
           dark:bg-dark">
       <Header/>
+      <FloatingNavigation />
       <main className="flex flex-col min-h-screen w-full my-8 max-w-[1100px] px-4 items-center bg-[#FAFAF9]
               sm:px-6 sm:items-start
               md:px-8
