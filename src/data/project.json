@@ -161,52 +161,48 @@
     {
       "id": 3,
       "title": "Portfolio Template",
-      "description": "간단한 포트폴리오 템플릿",
+      "description": "누구나 쉽게 사용하고 관리할 수 있는 포트폴리오 웹사이트. JSON 기반 데이터 관리로 코드 수정 없이 내용만 업데이트 가능하며, Next.js 16의 SEO 최적화 기능을 최대한 활용하여 검색 노출 가능성을 높였습니다. 완전 반응형 디자인과 다크모드 지원으로 모든 사용자에게 최적화된 경험을 제공합니다.",
       "team" : "1명",
       "role" : "Frontend",
       "period" : "2025.11",
       "projectImage" : [
         {
-          "src": "/images/project1/SVLHome.png",
-          "alt": "SVL_Home"
+          "src": "/images/project3/PortfolioAboutMe.png",
+          "alt": "PortfolioAboutMe"
         },
         {
-          "src": "/images/project1/SVL1.png",
-          "alt": "SVL_1"
+          "src": "/images/project3/PortfolioCompetency.png",
+          "alt": "PortfolioCompetency"
         },
         {
-          "src": "/images/project1/SVL2.png",
-          "alt": "SVL_2"
+          "src": "/images/project3/PortfolioSkills.png",
+          "alt": "PortfolioSkills"
         },
         {
-          "src": "/images/project1/SVL3.png",
-          "alt": "SVL_3"
+          "src": "/images/project3/PortfolioProjects.png",
+          "alt": "PortfolioProjects"
         },
         {
-          "src": "/images/project1/SVL4.png",
-          "alt": "SVL_4"
+          "src": "/images/project3/PortfolioProjectDetail.png",
+          "alt": "PortfolioProjectDetail"
         }
       ],
       "projectDescription" : [
         {
           "id": 1,
-          "content": "최신 프론트엔드 기술 스택 적용 : React 19, TypeScript 5.8, Vite 7, Tailwind CSS 4 기반으로 현대적인 개발 환경 구축. 빠른 HMR과 컴포넌트 기반 설계로 개발 속도와 유지보수성 향상"
+          "content": "Next.js 16 App Router 기반 현대적 아키텍처 : Server-Side Rendering을 통한 빠른 초기 로딩과 검색엔진 최적화. App Router의 파일 기반 라우팅과 Server/Client Component 분리로 성능과 개발 경험 향상. TypeScript 5와 React 19를 활용한 타입 안정성과 최신 기능 활용"
         },
         {
           "id": 2,
-          "content": "Atomic Design Pattern 기반 아키텍처 구축 : atoms → molecules → organisms 계층 구조 설계로 UI 재사용성을 극대화하고, 대규모 확장에 적합한 구조를 구현"
+          "content": "JSON 기반 데이터 관리 시스템 : 프로젝트 정보, 자기소개, 기술 스택을 JSON 파일로 관리하여 비개발자도 쉽게 내용 수정 가능. TypeScript 타입 정의로 데이터 구조 명확화 및 실수 방지. 코드 수정 없이 데이터만 업데이트하여 즉시 반영되는 구조 설계"
         },
         {
           "id": 3,
-          "content": "도메인 기반 프로젝트 구조 정립 : components, api, router, hooks, context, utils 등 관심사 분리를 명확히 하여 코드 가독성 및 확장성 확보"
+          "content": "SEO 최적화 구현 : Next.js Metadata API를 활용한 동적 메타데이터 생성 (title, description, keywords, Open Graph, Twitter Card). Schema.org Person 스키마를 활용한 JSON-LD 구조화된 데이터로 검색엔진 이해도 향상. robots.txt와 sitemap.xml 자동 생성으로 검색엔진 크롤링 최적화"
         },
         {
           "id": 4,
-          "content": "Tailwind CSS 4 디자인 시스템 구성 : Pretendard 폰트, 커스텀 컬러/타이포그래피 토큰(@theme), 유틸리티 퍼스트 전략을 통해 일관된 디자인 가이드 구축"
-        },
-        {
-          "id": 5,
-          "content": "모던 React 패턴 활용 : 함수형 컴포넌트 + Hooks 기반 상태 관리, StrictMode 적용, 재사용 가능한 UI/비즈니스 로직 설계"
+          "content": "접근성과 사용자 경험 최적화 : Tailwind CSS 4 기반 완전 반응형 디자인으로 모든 디바이스에서 최적화된 경험 제공. localStorage 기반 다크모드 지원 및 FOUC 방지 스크립트 적용. Radix UI를 활용한 키보드 네비게이션 및 스크린 리더 지원으로 접근성 향상"
         }
       ],
       "techLogos": [
@@ -227,7 +223,7 @@
           "alt": "Next.js Logo"
         }
       ],
-      "githubLink": "https://github.com/dojin8351/SVL_SeeVocaLanguage.git",
+      "githubLink": "https://github.com/dojin8351/Portfolio.git",
       "hoverOptions": "bg-blue-300 border-blue-500"
     },
     {
