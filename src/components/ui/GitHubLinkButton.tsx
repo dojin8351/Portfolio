@@ -1,6 +1,6 @@
 'use client'
 
-import {Github} from "lucide-react";
+import GitHubIcon from "@/components/ui/GitHubIcon";
 
 interface GitHubLinkButtonProps {
   githubLink : string
@@ -8,14 +8,13 @@ interface GitHubLinkButtonProps {
 
 
 export default function GitHubLinkButton({githubLink} : GitHubLinkButtonProps) {
-  const openGitHub = () => {
-    window.open(githubLink, '_blank', 'noopener,noreferrer')
-  }
-  return (<button
-    onClick={openGitHub}
-    className={'animate-bounce text-md font-medium bg-gray-200 px-1.5 py-0.5 rounded-full text-gray-600 dark:text-white dark:bg-gray-700 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 flex flex-row items-center gap-1'}
-    suppressHydrationWarning
+  return <a
+    href={githubLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={'cursor-pointer gap-1 flex flex-row items-center bg-black dark:bg-white text-white dark:text-black text-xs rounded-full px-2 py-1 hover:opacity-80 transition-opacity'}
   >
-    <Github size={20}/>
-  </button>)
+    <GitHubIcon className="w-4 h-4 text-white dark:text-black" />
+    <p>github</p>
+  </a>
 }

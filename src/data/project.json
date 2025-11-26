@@ -221,6 +221,10 @@
         {
           "src": "/logos/frontend/Next.js.svg",
           "alt": "Next.js Logo"
+        },
+        {
+          "src": "/logos/frontend/zustand.svg",
+          "alt": "zustand Logo"
         }
       ],
       "githubLink": "https://github.com/dojin8351/Portfolio.git",

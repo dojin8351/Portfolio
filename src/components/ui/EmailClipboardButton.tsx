@@ -1,7 +1,7 @@
 'use client'
 
-import {Mail} from "lucide-react";
 import {toast} from "sonner";
+import Image from "next/image";
 
 interface EmailClipboardButtonProps {
   email : string
@@ -16,10 +16,11 @@ export default function EmailClipboardButton({email}: EmailClipboardButtonProps)
   return (
     <button 
       onClick={copy} 
-      className={'animate-bounce text-md font-medium bg-gray-200 px-1.5 py-0.5 rounded-full text-gray-600 dark:text-white dark:bg-gray-700 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 flex flex-row items-center gap-1'}
+      className={'text-md font-medium bg-gray-200 px-1.5 py-0.5 rounded-full text-gray-600 dark:text-white dark:bg-gray-700 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 flex flex-row items-center gap-1'}
       suppressHydrationWarning
     >
-      <Mail size={20}/>
+      <Image src={'/logos/google.svg'} alt="Google Logo" width={15} height={15}/>
+      <p>email</p>
     </button>
   );
 }
