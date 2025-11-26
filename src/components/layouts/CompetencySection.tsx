@@ -1,15 +1,13 @@
 import CompetencyCard from "@/components/ui/CompetencyCard";
 import competencyData from "@/data/competency.json";
 import { CompetencyData } from "@/types/competency";
+import SectionLayout from "@/components/layouts/SectionLayout";
 
 export default function CompetencySection() {
   const data = competencyData as CompetencyData;
 
   return (
-    <div className={'mt-10 w-full self-stretch'}>
-      <div className={'border-b dark:border-white'}>
-        <p className={'text-h3 font-semibold my-2 dark:text-white'}>역량</p>
-      </div>
+   <SectionLayout title={'역량'}>
       <div className={'flex flex-col gap-10 mt-10 w-full'}>
         {data.competencies.map((competency, index) => (
           <CompetencyCard
@@ -20,6 +18,6 @@ export default function CompetencySection() {
           />
         ))}
       </div>
-    </div>
+   </SectionLayout>
   )
 }
