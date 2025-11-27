@@ -11,6 +11,7 @@ import LogoIcon from "@/components/ui/LogoIcon"
 import GitHubIcon from "@/components/ui/GitHubIcon"
 import ProjectImageCarousel from "./ProjectImageCarousel"
 import React from "react"
+import ProjectDescriptionAccordion from "@/components/project/ProjectDescriptionAccordion"
 
 interface ProjectDetailDialogProps {
   projectInfo: Project
@@ -37,8 +38,8 @@ function ProjectDetailDialog({ projectInfo }: ProjectDetailDialogProps) {
               src={logo.src}
               alt={logo.alt}
               key={logo.src}
-              size={45}
-              wrapperSize={60}
+              size={35}
+              wrapperSize={50}
               className="rounded-sm px-1 py-1"
             />
           ))}
@@ -81,16 +82,9 @@ function ProjectDetailDialog({ projectInfo }: ProjectDetailDialogProps) {
       <hr />
       <div className="flex flex-col">
         <p className="mb-2 text-gray-400 dark:text-gray-500">상세 내용</p>
-        <ul className="list-disc px-4">
-          {projectInfo.projectDescription.map((desc) => (
-            <li
-              key={desc.id}
-              className="mb-5 text-sm text-gray-700 dark:text-gray-300"
-            >
-              {desc.content}
-            </li>
-          ))}
-        </ul>
+        <ProjectDescriptionAccordion
+          projectDescription={projectInfo.projectDescription}
+        />
       </div>
       <DialogFooter className="sm:justify-end">
         <DialogClose asChild>

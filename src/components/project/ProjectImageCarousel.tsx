@@ -27,7 +27,7 @@ export default function ProjectImageCarousel({
                   alt={img.alt}
                   width={800}
                   height={500}
-                  className="h-auto w-full rounded-md object-contain"
+                  className="mt-5 h-auto w-full rounded-md object-contain"
                   sizes="(max-width: 768px) 100vw, 800px"
                   loading={index === 0 ? undefined : "lazy"}
                 />

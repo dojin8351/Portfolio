@@ -8,11 +8,17 @@ export interface Project {
   role: string
   period: string
   projectImage: ImgType[]
-  projectDescription: { id: number; title: string; content: string }[]
+  projectDescription: ProjectDescription[]
   techLogos: ImgType[]
   githubLink: string
 }
 
 export interface ProjectData {
   project: Project[]
+}
+
+export interface ProjectDescription {
+  id: number
+  title: string
+  content: string
 }

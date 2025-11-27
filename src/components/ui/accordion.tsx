@@ -52,13 +52,40 @@ function AccordionContent({
   children,
   ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Content>) {
+  const ref = React.useRef<HTMLDivElement>(null)
+
+  const handleScrollOnOpen = (state: string) => {
+    if (state !== "open") return
+
+    setTimeout(() => {
+      if (!ref.current) return
+
+      const rect = ref.current.getBoundingClientRect()
+
+      const isOutOfView = rect.bottom > window.innerHeight
+
+      if (isOutOfView) {
+        ref.current.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        })
+      }
+    }, 50)
+  }
+
   return (
     <AccordionPrimitive.Content
       data-slot="accordion-content"
       className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm"
+      onAnimationEnd={(e) => {
+        const state = e.currentTarget.getAttribute("data-state")
+        if (state) handleScrollOnOpen(state)
+      }}
       {...props}
     >
-      <div className={cn("pt-0 pb-4", className)}>{children}</div>
+      <div ref={ref} className={cn("pt-0 pb-4", className)}>
+        {children}
+      </div>
     </AccordionPrimitive.Content>
   )
 }

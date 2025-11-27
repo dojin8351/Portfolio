@@ -3,39 +3,39 @@
     {
       "title" : "프론트엔드",
       "logos" : [
-        { "src": "/logos/frontend/React.svg", "alt": "React Logo" },
-        { "src": "/logos/frontend/Next.js.svg", "alt": "Next.js Logo" },
-        { "src": "/logos/frontend/TypeScript.svg", "alt": "TypeScript Logo" },
-        { "src": "/logos/frontend/JavaScript.svg", "alt": "JavaScript Logo" },
-        { "src": "/logos/frontend/HTML5.svg", "alt": "HTML Logo"},
-        { "src": "/logos/frontend/CSS3.svg", "alt": "HTML Logo"},
-        { "src": "/logos/frontend/Node.js.svg", "alt": "HTML Logo"},
-        { "src": "/logos/frontend/Tailwind CSS.svg", "alt": "HTML Logo"}
+        { "src": "/logos/frontend/React.svg", "alt": "React" },
+        { "src": "/logos/frontend/Next.js.svg", "alt": "Next.js" },
+        { "src": "/logos/frontend/TypeScript.svg", "alt": "TypeScript" },
+        { "src": "/logos/frontend/JavaScript.svg", "alt": "JavaScript" },
+        { "src": "/logos/frontend/HTML5.svg", "alt": "HTML"},
+        { "src": "/logos/frontend/CSS3.svg", "alt": "CSS3"},
+        { "src": "/logos/frontend/Node.js.svg", "alt": "Node.js"},
+        { "src": "/logos/frontend/Tailwind CSS.svg", "alt": "Tailwind CSS"}
       ]
     },
     {
       "title" : "백엔드",
       "logos" : [
-        { "src": "/logos/backend/IntelliJ IDEA.svg", "alt": "React Logo" },
-        { "src": "/logos/backend/Java.svg", "alt": "Next.js Logo" },
-        { "src": "/logos/backend/PostgresSQL.svg", "alt": "TypeScript Logo" },
-        { "src": "/logos/backend/MySQL.svg", "alt": "JavaScript Logo" },
-        { "src": "/logos/backend/Redis.svg", "alt": "HTML Logo"},
-        { "src": "/logos/backend/Spring.svg", "alt": "HTML Logo"},
-        { "src": "/logos/backend/MongoDB.svg", "alt": "HTML Logo"}
+        { "src": "/logos/backend/IntelliJ IDEA.svg", "alt": "IntelliJ IDEA" },
+        { "src": "/logos/backend/Java.svg", "alt": "Java" },
+        { "src": "/logos/backend/PostgresSQL.svg", "alt": "PostgresSQL" },
+        { "src": "/logos/backend/MySQL.svg", "alt": "MySQL" },
+        { "src": "/logos/backend/Redis.svg", "alt": "Redis"},
+        { "src": "/logos/backend/Spring.svg", "alt": "Spring"},
+        { "src": "/logos/backend/MongoDB.svg", "alt": "MongoDB"}
       ]
 
     },
     {
       "title" : "협업",
       "logos" : [
-        { "src": "/logos/collaboration/Figma.svg", "alt": "React Logo" },
-        { "src": "/logos/collaboration/GitHub.svg", "alt": "Next.js Logo" },
-        { "src": "/logos/collaboration/GitLab.svg", "alt": "TypeScript Logo" },
-        { "src": "/logos/collaboration/Jira.svg", "alt": "JavaScript Logo" },
-        { "src": "/logos/collaboration/Postman.svg", "alt": "HTML Logo"},
-        { "src": "/logos/collaboration/Sourcetree.svg", "alt": "HTML Logo"},
-        { "src": "/logos/collaboration/Swagger.svg", "alt": "HTML Logo"}
+        { "src": "/logos/collaboration/Figma.svg", "alt": "Figma" },
+        { "src": "/logos/collaboration/GitHub.svg", "alt": "GitHub" },
+        { "src": "/logos/collaboration/GitLab.svg", "alt": "GitLab" },
+        { "src": "/logos/collaboration/Jira.svg", "alt": "Jira" },
+        { "src": "/logos/collaboration/Postman.svg", "alt": "Postman"},
+        { "src": "/logos/collaboration/Sourcetree.svg", "alt": "Sourcetree"},
+        { "src": "/logos/collaboration/Swagger.svg", "alt": "Swagger"}
 
       ]
 

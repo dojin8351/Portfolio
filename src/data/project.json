@@ -58,27 +58,27 @@
       "techLogos": [
         {
           "src": "/logos/frontend/ReactNative.svg",
-          "alt": "React"
+          "alt": "ReactNative"
         },
         {
           "src": "/logos/frontend/TypeScript.svg",
-          "alt": "TypeScript Logo"
+          "alt": "TypeScript"
         },
         {
           "src": "/logos/frontend/Tailwind CSS.svg",
-          "alt": "Tailwind CSS Logo"
+          "alt": "Tailwind CSS"
         },
         {
           "src": "/logos/frontend/ReactQuery.svg",
-          "alt": "ReactQuery Logo"
+          "alt": "ReactQuery"
         },
         {
           "src": "/logos/frontend/Expo.svg",
-          "alt": "Expo Logo"
+          "alt": "Expo"
         },
         {
           "src": "/logos/frontend/zustand.svg",
-          "alt": "zustand Logo"
+          "alt": "Zustand"
         }
       ],
       "githubLink": "https://github.com/dojin8351/FoBank"
@@ -150,23 +150,31 @@
         },
         {
           "src": "/logos/frontend/TypeScript.svg",
-          "alt": "TypeScript Logo"
+          "alt": "TypeScript"
         },
         {
           "src": "/logos/frontend/Tailwind CSS.svg",
-          "alt": "Tailwind CSS Logo"
+          "alt": "Tailwind CSS"
         },
         {
           "src": "/logos/frontend/ReactQuery.svg",
-          "alt": "ReactQuery Logo"
+          "alt": "ReactQuery"
         },
         {
           "src": "/logos/frontend/zustand.svg",
-          "alt": "zustand Logo"
+          "alt": "Zustand"
         },
         {
           "src": "/logos/frontend/Next.js.svg",
-          "alt": "zustand Logo"
+          "alt": "Next.js"
+        },
+        {
+          "src": "/logos/frontend/WebSocket.svg",
+          "alt": "WebSocket"
+        },
+        {
+          "src": "/logos/frontend/OpenVidu.png",
+          "alt": "OpenVidu"
         }
       ],
       "githubLink": "https://github.com/dojin8351/FoBank"
@@ -220,23 +228,23 @@
       "techLogos": [
         {
           "src": "/logos/frontend/React.svg",
-          "alt": "React Logo"
+          "alt": "React"
         },
         {
           "src": "/logos/frontend/TypeScript.svg",
-          "alt": "TypeScript Logo"
+          "alt": "TypeScript"
         },
         {
           "src": "/logos/frontend/Tailwind CSS.svg",
-          "alt": "Tailwind CSS Logo"
+          "alt": "Tailwind CSS"
         },
         {
           "src": "/logos/frontend/Next.js.svg",
-          "alt": "Next.js Logo"
+          "alt": "Next.js"
         },
         {
           "src": "/logos/frontend/zustand.svg",
-          "alt": "zustand Logo"
+          "alt": "Zustand"
         }
       ],
       "githubLink": "https://github.com/dojin8351/Portfolio.git"
@@ -300,15 +308,15 @@
       "techLogos": [
         {
           "src": "/logos/frontend/React.svg",
-          "alt": "React Logo"
+          "alt": "React"
         },
         {
           "src": "/logos/frontend/TypeScript.svg",
-          "alt": "TypeScript Logo"
+          "alt": "TypeScript"
         },
         {
           "src": "/logos/frontend/Tailwind CSS.svg",
-          "alt": "Tailwind CSS Logo"
+          "alt": "Tailwind CSS"
         }
       ],
       "githubLink": "https://github.com/dojin8351/SVL_SeeVocaLanguage.git"
