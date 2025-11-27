@@ -4,10 +4,10 @@
       "id": 1,
       "title": "FoBank (외국인 전용 금융 서비스)",
       "description": "FoBank 는 한국에 거주하는 외국인을 대상으로 하는 서비스로, 다양한 금융 서비스를 한번에 사용할 수 있습니다.\n기존 서비스와 달리, 외국인 대상 카드/계좌 상품을 추천하고 필수로 알아야 하는 정부 공지를 제공하는 서비스입니다.",
-      "team" : "6명 (BE 4, FE 2)",
-      "role" : "Frontend",
-      "period" : "2025.08 ~ 2025.10",
-      "projectImage" : [
+      "team": "6명 (BE 4, FE 2)",
+      "role": "Frontend",
+      "period": "2025.08 ~ 2025.10",
+      "projectImage": [
         {
           "src": "/images/project2/FoBankAsset.png",
           "alt": "Asset"
@@ -15,36 +15,44 @@
         {
           "src": "/images/project2/FoBankAsset2.png",
           "alt": "Asset2"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankDeposit.png",
           "alt": "Deposit"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankNotice.png",
           "alt": "Notice"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankPay.png",
           "alt": "Pay"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankRecommend.png",
           "alt": "Recommend"
         }
       ],
-      "projectDescription" : [
+      "projectDescription": [
         {
-          "id" : 1,
-          "content" : "상태관리 및 성능 최적화 :  React Query의 over-fetching 및 중복 요청 문제를 해결하기 위해, staleTime 5분, gcTime 10분 설정으로 캐싱 전략 최적화. Promise.all을 활용한 병렬 쿼리로 계좌/카드 데이터 동시 페칭, 쿼리 키 기반 중앙 집중식 캐시 관리\n\n동시에 여러 API 요청이 401 에러를 받을 때 refresh 토큰 중복 갱신 문제를 해결하기 위해, Single-Flight 패턴 구현. refreshPromise 변수로 동시 요청 시 refresh는 한 번만 실행되도록 처리"
+          "id": 1,
+          "title": "상태관리 및 성능 최적화",
+          "content": "React Query의 over-fetching 및 중복 요청 문제를 해결하기 위해, staleTime 5분, gcTime 10분 설정으로 캐싱 전략 최적화. Promise.all을 활용한 병렬 쿼리로 계좌/카드 데이터 동시 페칭, 쿼리 키 기반 중앙 집중식 캐시 관리\n\n동시에 여러 API 요청이 401 에러를 받을 때 refresh 토큰 중복 갱신 문제를 해결하기 위해, Single-Flight 패턴 구현. refreshPromise 변수로 동시 요청 시 refresh는 한 번만 실행되도록 처리"
         },
         {
-          "id" : 2,
-          "content" : "인증 :  JWT 토큰 만료 시 수동 갱신의 사용자 불편 문제를 해결하기 위해, Axios 인터셉터에서 JWT decode로 사전 만료 검증 후 자동 refresh. 요청/응답 인터셉터로 모든 API 호출에 자동 토큰 주입 및 401 처리\n\nPIN 5회 오류 시 계정 잠금 처리 및 AsyncStorage에 잠금 상태 저장. 403 에러 감지 시 자동 로그아웃 및 스플래시 화면으로 리다이렉션"
+          "id": 2,
+          "title": "인증",
+          "content": "JWT 토큰 만료 시 수동 갱신의 사용자 불편 문제를 해결하기 위해, Axios 인터셉터에서 JWT decode로 사전 만료 검증 후 자동 refresh. 요청/응답 인터셉터로 모든 API 호출에 자동 토큰 주입 및 401 처리\n\nPIN 5회 오류 시 계정 잠금 처리 및 AsyncStorage에 잠금 상태 저장. 403 에러 감지 시 자동 로그아웃 및 스플래시 화면으로 리다이렉션"
         },
         {
-          "id" : 3,
-          "content" : "다국어 :  한국어 서버 에러 메시지로 인한 외국인 사용자 이해도 저하 문제를 해결하기 위해, 에러 메시지 자동 번역 시스템 구현. 정규표현식으로 한국어 감지, 맵핑 테이블 및 키워드 기반 부분 일치 번역으로 30개 이상 에러 메시지 영어 변환\n\n다국어 지원을 위해 언어 선택 기능 구현 (한국어/영어/중국어). 사용자 선호 언어를 Zustand store 및 서버에 저장, 앱 내 동적 언어 변경 가능"
+          "id": 3,
+          "title": "다국어",
+          "content": "한국어 서버 에러 메시지로 인한 외국인 사용자 이해도 저하 문제를 해결하기 위해, 에러 메시지 자동 번역 시스템 구현. 정규표현식으로 한국어 감지, 맵핑 테이블 및 키워드 기반 부분 일치 번역으로 30개 이상 에러 메시지 영어 변환\n\n다국어 지원을 위해 언어 선택 기능 구현 (한국어/영어/중국어). 사용자 선호 언어를 Zustand store 및 서버에 저장, 앱 내 동적 언어 변경 가능"
         },
         {
-          "id" : 4,
-          "content" : "UI/UX 및 디자인 시스템 :  일관성 없는 스타일링 문제를 해결하기 위해, NativeWind(Tailwind CSS) 기반 디자인 시스템 구축. 커스텀 색상 토큰(primaryBlue1, errorColor 등), 타이포그래피 유틸리티(.body-md-bold, .title-lg-medium 등) 정의\n\n재사용 가능한 컴포넌트 라이브러리 구축. Button(variant, size, loading 상태), ModalBottom(Bottom Sheet), TransactionHistory(날짜별 그룹화) 등 10개 이상 공통 컴포넌트 개발\n\nReact Native Reanimated를 활용한 네이티브 성능 애니메이션. 이체 확인 화면 화살표 애니메이션, 페이지 전환 인터랙션 구현"
+          "id": 4,
+          "title": "UI/UX 및 디자인 시스템",
+          "content": "일관성 없는 스타일링 문제를 해결하기 위해, NativeWind(Tailwind CSS) 기반 디자인 시스템 구축. 커스텀 색상 토큰(primaryBlue1, errorColor 등), 타이포그래피 유틸리티(.body-md-bold, .title-lg-medium 등) 정의\n\n재사용 가능한 컴포넌트 라이브러리 구축. Button(variant, size, loading 상태), ModalBottom(Bottom Sheet), TransactionHistory(날짜별 그룹화) 등 10개 이상 공통 컴포넌트 개발\n\nReact Native Reanimated를 활용한 네이티브 성능 애니메이션. 이체 확인 화면 화살표 애니메이션, 페이지 전환 인터랙션 구현"
         }
       ],
       "techLogos": [
@@ -73,18 +81,16 @@
           "alt": "zustand Logo"
         }
       ],
-      "githubLink": "https://github.com/dojin8351/FoBank",
-      "hoverBackground": "hover:bg-green-200 dark:hover:bg-green-700",
-      "hoverBorder": "hover:border-2 hover:border-green-300 dark:hover:border-green-400"
+      "githubLink": "https://github.com/dojin8351/FoBank"
     },
     {
       "id": 2,
       "title": "ZipOn (부동산 경매 플랫폼)",
       "description": "ZipOn은 AI 기반 부동산 검증과 실시간 라이브 커머스를 결합한 부동산 거래 플랫폼입니다. 등기부등본 자동 검증, 계약서 불공정 조항 분석, 실시간 라이브 방송, 경매 시스템 등 다양한 기능을 제공합니다.",
-      "team" : "6명 (BE 3, AI 1, FE 1, INF 1)",
-      "role" : "Frontend",
-      "period" : "2025.10 ~ 2025.11",
-      "projectImage" : [
+      "team": "6명 (BE 3, AI 1, FE 1, INF 1)",
+      "role": "Frontend",
+      "period": "2025.10 ~ 2025.11",
+      "projectImage": [
         {
           "src": "/images/project2/FoBankAsset.png",
           "alt": "Asset"
@@ -92,16 +98,20 @@
         {
           "src": "/images/project2/FoBankAsset2.png",
           "alt": "Asset2"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankDeposit.png",
           "alt": "Deposit"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankNotice.png",
           "alt": "Notice"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankPay.png",
           "alt": "Pay"
-        },{
+        },
+        {
           "src": "/images/project2/FoBankRecommend.png",
           "alt": "Recommend"
         }
@@ -109,23 +119,28 @@
       "projectDescription": [
         {
           "id": 1,
-          "content": "실시간 통신 아키텍처 : STOMP WebSocket 기반 실시간 채팅 및 라이브 방송 시스템 구축. 단일 연결 인스턴스 관리로 중복 연결 방지, 구독 상태를 Map으로 중앙 관리하여 메모리 누수 방지. 연결 중 상태 추적으로 동시 연결 요청 시 대기 큐 처리\n\nOpenVidu 기반 실시간 비디오 스트리밍 구현. 토큰 1회 사용 제한, 연결 중/정리 중 상태 플래그로 중복 초기화 방지. MediaStream 클론을 활용한 미니 플레이어 기능으로 백그라운드 재생 지원, 드래그 앤 드롭으로 위치 조정 가능"
+          "title": "실시간 통신 아키텍처",
+          "content": "STOMP WebSocket 기반 실시간 채팅 및 라이브 방송 시스템 구축. 단일 연결 인스턴스 관리로 중복 연결 방지, 구독 상태를 Map으로 중앙 관리하여 메모리 누수 방지. 연결 중 상태 추적으로 동시 연결 요청 시 대기 큐 처리\n\nOpenVidu 기반 실시간 비디오 스트리밍 구현. 토큰 1회 사용 제한, 연결 중/정리 중 상태 플래그로 중복 초기화 방지. MediaStream 클론을 활용한 미니 플레이어 기능으로 백그라운드 재생 지원, 드래그 앤 드롭으로 위치 조정 가능"
         },
         {
           "id": 2,
-          "content": "데이터 동기화 및 중복 방지 : WebSocket 실시간 메시지와 서버 REST API 응답을 병합하는 하이브리드 데이터 관리. messageSeq 기반 Map 자료구조로 중복 메시지 제거, React Query 캐시와 Zustand 상태를 동기화하여 서버 데이터와 실시간 데이터 일관성 유지\n\n채팅방 목록에서 서버 unreadCount와 WebSocket 실시간 업데이트를 병합, 타임스탬프 비교로 최신 메시지 우선 적용. React Query의 setQueryData로 낙관적 업데이트 구현"
+          "title": "데이터 동기화 및 중복 방지",
+          "content": "WebSocket 실시간 메시지와 서버 REST API 응답을 병합하는 하이브리드 데이터 관리. messageSeq 기반 Map 자료구조로 중복 메시지 제거, React Query 캐시와 Zustand 상태를 동기화하여 서버 데이터와 실시간 데이터 일관성 유지\n\n채팅방 목록에서 서버 unreadCount와 WebSocket 실시간 업데이트를 병합, 타임스탬프 비교로 최신 메시지 우선 적용. React Query의 setQueryData로 낙관적 업데이트 구현"
         },
         {
           "id": 3,
-          "content": "React Query 캐싱 전략 : staleTime 5분, gcTime 10분 설정으로 불필요한 재요청 방지. Query Keys를 중앙 집중식으로 관리하여 타입 안정성과 캐시 무효화 일관성 확보. refetchOnWindowFocus, refetchOnMount 비활성화로 사용자 경험 개선\n\n지수 백오프 재시도 전략(retryDelay: 2^attemptIndex)으로 네트워크 오류 시 서버 부하 완화. Mutation은 재시도 비활성화하여 중복 요청 방지"
+          "title": "React Query 캐싱 전략",
+          "content": "staleTime 5분, gcTime 10분 설정으로 불필요한 재요청 방지. Query Keys를 중앙 집중식으로 관리하여 타입 안정성과 캐시 무효화 일관성 확보. refetchOnWindowFocus, refetchOnMount 비활성화로 사용자 경험 개선\n\n지수 백오프 재시도 전략(retryDelay: 2^attemptIndex)으로 네트워크 오류 시 서버 부하 완화. Mutation은 재시도 비활성화하여 중복 요청 방지"
         },
         {
           "id": 4,
-          "content": "PWA 오프라인 지원 : Service Worker 기반 오프라인 캐싱 전략. API 요청은 Network-First with Timeout(4초)으로 실패 시 캐시 fallback, 정적 자원은 Stale-While-Revalidate로 즉시 응답 후 백그라운드 갱신. 오프라인 페이지 자동 캐싱 및 네비게이션 프리로드 최적화\n\nService Worker 업데이트 감지 및 자동 적용으로 버전 관리 자동화. 환경변수 기반 PWA 활성화 토글로 개발/프로덕션 환경 분리"
+          "title": "PWA 오프라인 지원",
+          "content": "Service Worker 기반 오프라인 캐싱 전략. API 요청은 Network-First with Timeout(4초)으로 실패 시 캐시 fallback, 정적 자원은 Stale-While-Revalidate로 즉시 응답 후 백그라운드 갱신. 오프라인 페이지 자동 캐싱 및 네비게이션 프리로드 최적화\n\nService Worker 업데이트 감지 및 자동 적용으로 버전 관리 자동화. 환경변수 기반 PWA 활성화 토글로 개발/프로덕션 환경 분리"
         },
         {
           "id": 5,
-          "content": "Next.js App Router 아키텍처 : Server/Client Component 분리로 Suspense 기반 스트리밍 SSR 구현. Server Component에서 Suspense 래퍼, Client Component에서 useSuspenseQuery로 선언적 로딩 처리. Skeleton UI를 fallback으로 제공하여 로딩 상태 일관성 유지\n\nMiddleware에서 쿠키 기반 인증 1차 검증으로 불필요한 페이지 로드 방지. Server/Client 양쪽에서 동작하는 fetch 래퍼로 쿠키 자동 주입 및 에러 처리 통합"
+          "title": "Next.js App Router 아키텍처",
+          "content": "Server/Client Component 분리로 Suspense 기반 스트리밍 SSR 구현. Server Component에서 Suspense 래퍼, Client Component에서 useSuspenseQuery로 선언적 로딩 처리. Skeleton UI를 fallback으로 제공하여 로딩 상태 일관성 유지\n\nMiddleware에서 쿠키 기반 인증 1차 검증으로 불필요한 페이지 로드 방지. Server/Client 양쪽에서 동작하는 fetch 래퍼로 쿠키 자동 주입 및 에러 처리 통합"
         }
       ],
       "techLogos": [
@@ -154,18 +169,16 @@
           "alt": "zustand Logo"
         }
       ],
-      "githubLink": "https://github.com/dojin8351/FoBank",
-      "hoverBackground": "hover:bg-green-200 dark:hover:bg-green-700",
-      "hoverBorder": "hover:border-2 hover:border-green-300 dark:hover:border-green-400"
+      "githubLink": "https://github.com/dojin8351/FoBank"
     },
     {
       "id": 3,
       "title": "Portfolio Template",
       "description": "누구나 쉽게 사용하고 관리할 수 있는 포트폴리오 웹사이트. JSON 기반 데이터 관리로 코드 수정 없이 내용만 업데이트 가능하며, Next.js 16의 SEO 최적화 기능을 최대한 활용하여 검색 노출 가능성을 높였습니다. 완전 반응형 디자인과 다크모드 지원으로 모든 사용자에게 최적화된 경험을 제공합니다.",
-      "team" : "1명",
-      "role" : "Frontend",
-      "period" : "2025.11",
-      "projectImage" : [
+      "team": "1명",
+      "role": "Frontend",
+      "period": "2025.11",
+      "projectImage": [
         {
           "src": "/images/project3/PortfolioAboutMe.png",
           "alt": "PortfolioAboutMe"
@@ -187,18 +200,21 @@
           "alt": "PortfolioProjectDetail"
         }
       ],
-      "projectDescription" : [
+      "projectDescription": [
         {
           "id": 1,
-          "content": "JSON 기반 데이터 관리 시스템 : 프로젝트 정보, 자기소개, 기술 스택을 JSON 파일로 관리하여 비개발자도 쉽게 내용 수정 가능. TypeScript 타입 정의로 데이터 구조 명확화 및 실수 방지. 코드 수정 없이 데이터만 업데이트하여 즉시 반영되는 구조 설계"
+          "title": "JSON 기반 데이터 관리 시스템",
+          "content": "프로젝트 정보, 자기소개, 기술 스택을 JSON 파일로 관리하여 비개발자도 쉽게 내용 수정 가능. TypeScript 타입 정의로 데이터 구조 명확화 및 실수 방지. 코드 수정 없이 데이터만 업데이트하여 즉시 반영되는 구조 설계"
         },
         {
           "id": 2,
-          "content": "SEO 최적화 구현 : Next.js Metadata API를 활용한 동적 메타데이터 생성 (title, description, keywords, Open Graph, Twitter Card). Schema.org Person 스키마를 활용한 JSON-LD 구조화된 데이터로 검색엔진 이해도 향상. robots.txt와 sitemap.xml 자동 생성으로 검색엔진 크롤링 최적화"
+          "title": "SEO 최적화 구현",
+          "content": "SNext.js Metadata API를 활용한 동적 메타데이터 생성 (title, description, keywords, Open Graph, Twitter Card). Schema.org Person 스키마를 활용한 JSON-LD 구조화된 데이터로 검색엔진 이해도 향상. robots.txt와 sitemap.xml 자동 생성으로 검색엔진 크롤링 최적화"
         },
         {
           "id": 3,
-          "content": "접근성과 사용자 경험 최적화 : Tailwind CSS 4 기반 완전 반응형 디자인으로 모든 디바이스에서 최적화된 경험 제공. localStorage 기반 다크모드 지원 및 FOUC 방지 스크립트 적용. Radix UI를 활용한 키보드 네비게이션 및 스크린 리더 지원으로 접근성 향상"
+          "title": "접근성과 사용자 경험 최적화",
+          "content": "Tailwind CSS 4 기반 완전 반응형 디자인으로 모든 디바이스에서 최적화된 경험 제공. localStorage 기반 다크모드 지원 및 FOUC 방지 스크립트 적용. Radix UI를 활용한 키보드 네비게이션 및 스크린 리더 지원으로 접근성 향상"
         }
       ],
       "techLogos": [
@@ -223,17 +239,16 @@
           "alt": "zustand Logo"
         }
       ],
-      "githubLink": "https://github.com/dojin8351/Portfolio.git",
-      "hoverOptions": "bg-blue-300 border-blue-500"
+      "githubLink": "https://github.com/dojin8351/Portfolio.git"
     },
     {
       "id": 4,
       "title": "See Voca Language(SVL)",
       "description": "AI 객체 탐지 기술을 기반으로, 사용자가 직접 촬영하거나 업로드한 사진 속 물체를 인식하여 영어 단어를 자동으로 추천하고 학습할 수 있는 서비스 영어를 잘 모르는 사용자를 위해 직관적인 UI, 반복 학습 게임, 단어장 공유 기능을 통해 일상 속에서 재미있게 영어 단어를 익힐 수 있는 서비스.",
-      "team" : "6명 (BE 2, AI 1, FE 2, INF 1)",
-      "role" : "Frontend",
-      "period" : "2025.07 ~ 2025.08",
-      "projectImage" : [
+      "team": "6명 (BE 2, AI 1, FE 2, INF 1)",
+      "role": "Frontend",
+      "period": "2025.07 ~ 2025.08",
+      "projectImage": [
         {
           "src": "/images/project1/SVLHome.png",
           "alt": "SVL_Home"
@@ -255,26 +270,31 @@
           "alt": "SVL_4"
         }
       ],
-      "projectDescription" : [
+      "projectDescription": [
         {
           "id": 1,
-          "content": "최신 프론트엔드 기술 스택 적용 : React 19, TypeScript 5.8, Vite 7, Tailwind CSS 4 기반으로 현대적인 개발 환경 구축. 빠른 HMR과 컴포넌트 기반 설계로 개발 속도와 유지보수성 향상"
+          "title": "최신 프론트엔드 기술 스택 적용",
+          "content": "React 19, TypeScript 5.8, Vite 7, Tailwind CSS 4 기반으로 현대적인 개발 환경 구축. 빠른 HMR과 컴포넌트 기반 설계로 개발 속도와 유지보수성 향상"
         },
         {
           "id": 2,
-          "content": "Atomic Design Pattern 기반 아키텍처 구축 : atoms → molecules → organisms 계층 구조 설계로 UI 재사용성을 극대화하고, 대규모 확장에 적합한 구조를 구현"
+          "title": "Atomic Design Pattern 기반 아키텍처 구축",
+          "content": "atoms → molecules → organisms 계층 구조 설계로 UI 재사용성을 극대화하고, 대규모 확장에 적합한 구조를 구현"
         },
         {
           "id": 3,
-          "content": "도메인 기반 프로젝트 구조 정립 : components, api, router, hooks, context, utils 등 관심사 분리를 명확히 하여 코드 가독성 및 확장성 확보"
+          "title": "도메인 기반 프로젝트 구조 정립",
+          "content": "components, api, router, hooks, context, utils 등 관심사 분리를 명확히 하여 코드 가독성 및 확장성 확보"
         },
         {
           "id": 4,
-          "content": "Tailwind CSS 4 디자인 시스템 구성 : Pretendard 폰트, 커스텀 컬러/타이포그래피 토큰(@theme), 유틸리티 퍼스트 전략을 통해 일관된 디자인 가이드 구축"
+          "title": "Tailwind CSS 4 디자인 시스템 구성",
+          "content": "Pretendard 폰트, 커스텀 컬러/타이포그래피 토큰(@theme), 유틸리티 퍼스트 전략을 통해 일관된 디자인 가이드 구축"
         },
         {
           "id": 5,
-          "content": "모던 React 패턴 활용 : 함수형 컴포넌트 + Hooks 기반 상태 관리, StrictMode 적용, 재사용 가능한 UI/비즈니스 로직 설계"
+          "title": "모던 React 패턴 활용",
+          "content": "함수형 컴포넌트 + Hooks 기반 상태 관리, StrictMode 적용, 재사용 가능한 UI/비즈니스 로직 설계"
         }
       ],
       "techLogos": [
@@ -291,8 +311,7 @@
           "alt": "Tailwind CSS Logo"
         }
       ],
-      "githubLink": "https://github.com/dojin8351/SVL_SeeVocaLanguage.git",
-      "hoverOptions": "bg-blue-300 border-blue-500"
+      "githubLink": "https://github.com/dojin8351/SVL_SeeVocaLanguage.git"
     }
   ]
 }

@@ -16,9 +16,7 @@ interface ProjectDetailDialogProps {
   projectInfo: Project
 }
 
-function ProjectDetailDialog({
-  projectInfo,
-}: ProjectDetailDialogProps) {
+function ProjectDetailDialog({ projectInfo }: ProjectDetailDialogProps) {
   return (
     <DialogContent className="custom-scrollbar h-[85vh] !w-[80vw] !max-w-[80vw] overflow-y-auto dark:bg-gray-800 dark:text-white">
       <DialogHeader>
@@ -39,8 +37,8 @@ function ProjectDetailDialog({
               src={logo.src}
               alt={logo.alt}
               key={logo.src}
-              size={15}
-              wrapperSize={30}
+              size={45}
+              wrapperSize={60}
               className="rounded-sm px-1 py-1"
             />
           ))}

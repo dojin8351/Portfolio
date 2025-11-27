@@ -3,7 +3,7 @@ import AboutMeSection from "@/components/layouts/AboutMeSection"
 import aboutMeData from "@/data/aboutMe.json"
 import CompetencySection from "@/components/layouts/CompetencySection"
 import SkillSection from "@/components/layouts/SkillSection"
-import { Toaster } from "sonner"
+import { Toaster } from "@/components/ui/sonner"
 import ProjectSection from "@/components/layouts/ProjectSection"
 import dynamic from "next/dynamic"
 
