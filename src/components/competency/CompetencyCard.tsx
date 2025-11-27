@@ -1,6 +1,5 @@
-import Image from "next/image"
 import { ImgType } from "@/types/common"
-import LogoIcon from "@/components/ui/LogoIcon"
+import React from "react"
 
 interface CompetencyCardProps {
   logos: ImgType[]
@@ -8,11 +7,7 @@ interface CompetencyCardProps {
   description: string
 }
 
-export default function CompetencyCard({
-  logos,
-  title,
-  description,
-}: CompetencyCardProps) {
+function CompetencyCard({ title, description }: CompetencyCardProps) {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex-1">
@@ -24,3 +19,5 @@ export default function CompetencyCard({
     </div>
   )
 }
+
+export default React.memo(CompetencyCard)

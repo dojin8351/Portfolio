@@ -1,9 +1,7 @@
 "use client"
 
-import { useCallback } from "react"
-
 export function useScrollToSection() {
-  const scrollToSection = useCallback((sectionId: string | null) => {
+  const scrollToSection = (sectionId: string | null) => {
     if (!sectionId) {
       window.scrollTo({ top: 0, behavior: "smooth" })
       return
@@ -13,7 +11,7 @@ export function useScrollToSection() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" })
     }
-  }, [])
+  }
 
   return { scrollToSection }
 }

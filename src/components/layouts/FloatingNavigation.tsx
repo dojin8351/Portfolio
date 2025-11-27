@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import ThemeToggleButton from "../ui/ThemeToggleButton"
 import { useScrollToSection } from "@/hooks/useScrollToSection"
 import { useActiveSection } from "@/hooks/useActiveSection"
@@ -10,6 +10,7 @@ export default function FloatingNavigation() {
   const { activeSection } = useActiveSection()
   const { scrollToSection } = useScrollToSection()
   const [isDark, setIsDark] = useState(false)
+  const rafIdRef = useRef<number | null>(null)
 
   useEffect(() => {
     const checkDarkMode = () => {
@@ -24,14 +25,23 @@ export default function FloatingNavigation() {
     })
 
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 100)
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current)
+      }
+
+      rafIdRef.current = requestAnimationFrame(() => {
+        setIsVisible(window.scrollY > 100)
+      })
     }
 
     handleScroll()
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => {
       window.removeEventListener("scroll", handleScroll)
       observer.disconnect()
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current)
+      }
     }
   }, [])
 

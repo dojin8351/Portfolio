@@ -20,7 +20,7 @@ export default function ProjectImageCarousel({
       <Carousel>
         <CarouselContent className="-ml-4">
           {images.map((img, index) => (
-            <CarouselItem key={index} className="basis-full pl-4">
+            <CarouselItem key={img.src} className="basis-full pl-4">
               <div className="flex justify-center">
                 <Image
                   src={img.src}

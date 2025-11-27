@@ -20,7 +20,6 @@ export function useTheme() {
         html.classList.remove("dark")
       }
     } else {
-      // 기본값 설정
       html.classList.remove("dark")
     }
   }, [])

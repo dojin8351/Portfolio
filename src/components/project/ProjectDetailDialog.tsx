@@ -10,12 +10,13 @@ import { Project } from "@/types/project"
 import LogoIcon from "@/components/ui/LogoIcon"
 import GitHubIcon from "@/components/ui/GitHubIcon"
 import ProjectImageCarousel from "./ProjectImageCarousel"
+import React from "react"
 
 interface ProjectDetailDialogProps {
   projectInfo: Project
 }
 
-export default function ProjectDetailDialog({
+function ProjectDetailDialog({
   projectInfo,
 }: ProjectDetailDialogProps) {
   return (
@@ -33,11 +34,11 @@ export default function ProjectDetailDialog({
       <div>
         <p className="mb-2 text-gray-400 dark:text-gray-500">기술 스택</p>
         <div className="flex flex-row gap-1">
-          {projectInfo.techLogos.map((logo, index) => (
+          {projectInfo.techLogos.map((logo) => (
             <LogoIcon
               src={logo.src}
               alt={logo.alt}
-              key={index}
+              key={logo.src}
               size={15}
               wrapperSize={30}
               className="rounded-sm px-1 py-1"
@@ -83,9 +84,9 @@ export default function ProjectDetailDialog({
       <div className="flex flex-col">
         <p className="mb-2 text-gray-400 dark:text-gray-500">상세 내용</p>
         <ul className="list-disc px-4">
-          {projectInfo.projectDescription.map((desc, index) => (
+          {projectInfo.projectDescription.map((desc) => (
             <li
-              key={index}
+              key={desc.id}
               className="mb-5 text-sm text-gray-700 dark:text-gray-300"
             >
               {desc.content}
@@ -107,3 +108,5 @@ export default function ProjectDetailDialog({
     </DialogContent>
   )
 }
+
+export default React.memo(ProjectDetailDialog)
