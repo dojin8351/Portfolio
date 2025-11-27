@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
-const SECTIONS = ['about-me', 'competency', 'skills', 'projects'] as const
+const SECTIONS = ["about-me", "competency", "skills", "projects"] as const
 const SCROLL_THRESHOLD = 200
 
 export function useActiveSection() {
-  const [activeSection, setActiveSection] = useState<string>('')
+  const [activeSection, setActiveSection] = useState<string>("")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +14,7 @@ export function useActiveSection() {
 
       // 페이지 맨 위에 있을 때는 about-me
       if (window.scrollY < SCROLL_THRESHOLD) {
-        setActiveSection('about-me')
+        setActiveSection("about-me")
         return
       }
 
@@ -32,10 +32,9 @@ export function useActiveSection() {
     }
 
     handleScroll() // 초기 실행
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return { activeSection }
 }
-

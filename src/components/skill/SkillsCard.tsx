@@ -1,26 +1,19 @@
-import { ImgType } from "@/types/common";
-import LogoIcon from "@/components/ui/LogoIcon";
+import { ImgType } from "@/types/common"
+import LogoIcon from "@/components/ui/LogoIcon"
+import React from "react"
 
 interface SkillsCardProps {
-  logos: ImgType[];
-  title: string;
+  logos: ImgType[]
+  title: string
 }
 
-export default function SkillsCard({ logos, title }: SkillsCardProps) {
+function SkillsCard({ logos, title }: SkillsCardProps) {
   return (
     <div className="flex w-full flex-col gap-1">
-      <p className="text-lg font-semibold
-              sm:text-xl
-              dark:text-white">
+      <p className="text-lg font-semibold sm:text-xl dark:text-white">
         {title}
       </p>
-      <div
-        className="
-          bg-gray-100 rounded-2xl p-4 shadow-sm w-full grid grid-cols-3 gap-1 place-items-center
-          sm:p-6 sm:gap-1
-          md:p-8
-          dark:bg-gray-800 dark:shadow-md"
-      >
+      <div className="grid w-full grid-cols-3 place-items-center gap-1 rounded-2xl bg-gray-100 p-4 shadow-sm sm:gap-1 sm:p-6 md:p-8 dark:bg-gray-800 dark:shadow-md">
         {logos.map((img, index) => (
           <LogoIcon
             key={index}
@@ -32,5 +25,7 @@ export default function SkillsCard({ logos, title }: SkillsCardProps) {
         ))}
       </div>
     </div>
-  );
+  )
 }
+
+export default React.memo(SkillsCard)

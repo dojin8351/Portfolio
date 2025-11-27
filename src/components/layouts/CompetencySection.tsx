@@ -1,14 +1,14 @@
-import CompetencyCard from "@/components/competency/CompetencyCard";
-import competencyData from "@/data/competency.json";
-import { CompetencyData } from "@/types/competency";
-import SectionLayout from "@/components/layouts/SectionLayout";
+import CompetencyCard from "@/components/competency/CompetencyCard"
+import competencyData from "@/data/competency.json"
+import { CompetencyData } from "@/types/competency"
+import SectionLayout from "@/components/layouts/SectionLayout"
 
 export default function CompetencySection() {
-  const data = competencyData as CompetencyData;
+  const data = competencyData as CompetencyData
 
   return (
-   <SectionLayout title={'역량'} sectionId="competency">
-      <div className={'flex flex-col gap-10 mt-10 w-full'}>
+    <SectionLayout title={"역량"} sectionId="competency">
+      <div className={"mt-10 flex w-full flex-col gap-10"}>
         {data.competencies.map((competency, index) => (
           <CompetencyCard
             key={index}
@@ -18,6 +18,6 @@ export default function CompetencySection() {
           />
         ))}
       </div>
-   </SectionLayout>
+    </SectionLayout>
   )
 }

@@ -1,5 +1,6 @@
 import LogoIcon from "@/components/ui/LogoIcon";
 import { ImgType } from "@/types/competency";
+import React from "react";
 
 interface ProjectCardPreviewProps {
   title: string;
@@ -8,7 +9,7 @@ interface ProjectCardPreviewProps {
   techLogos: ImgType[];
 }
 
-export default function ProjectCardPreview({
+function ProjectCardPreview({
   title,
   period,
   description,
@@ -44,4 +45,6 @@ export default function ProjectCardPreview({
     </div>
   );
 }
+
+export default React.memo(ProjectCardPreview);
 

@@ -1,5 +1,5 @@
-import React from "react";
-import SectionHeader from "@/components/layouts/SectionHeader";
+import React from "react"
+import SectionHeader from "@/components/layouts/SectionHeader"
 
 interface SectionLayoutProps {
   title: string
@@ -7,10 +7,17 @@ interface SectionLayoutProps {
   sectionId?: string
 }
 
-export default function SectionLayout({title, children, sectionId} : SectionLayoutProps) {
+export default function SectionLayout({
+  title,
+  children,
+  sectionId,
+}: SectionLayoutProps) {
   return (
-    <div id={sectionId} className={'mt-10 w-full self-stretch mb-10 scroll-mt-20'}>
-      <SectionHeader title={title}/>
+    <div
+      id={sectionId}
+      className={"mt-10 mb-10 w-full scroll-mt-20 self-stretch"}
+    >
+      <SectionHeader title={title} />
       {children}
     </div>
   )

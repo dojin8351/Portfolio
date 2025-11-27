@@ -1,18 +1,18 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import React from "react";
-import type { Metadata } from "next";
-import aboutMeData from "@/data/aboutMe.json";
+import { Geist, Geist_Mono } from "next/font/google"
+import "./globals.css"
+import React from "react"
+import type { Metadata } from "next"
+import aboutMeData from "@/data/aboutMe.json"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: {
@@ -69,12 +69,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -85,7 +85,7 @@ export default function RootLayout({
     url: aboutMeData.githubLink,
     sameAs: [aboutMeData.githubLink],
     description: `${aboutMeData.job} 개발자 포트폴리오`,
-  };
+  }
 
   return (
     <html lang="ko" suppressHydrationWarning>
@@ -110,10 +110,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#FAFAF9] dark:bg-dark`}
+        className={`${geistSans.variable} ${geistMono.variable} dark:bg-dark bg-[#FAFAF9] antialiased`}
       >
         {children}
       </body>
     </html>
-  );
+  )
 }

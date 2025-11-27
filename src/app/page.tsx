@@ -1,36 +1,31 @@
-import Header from "@/components/layouts/Header";
-import AboutMeSection from "@/components/layouts/AboutMeSection";
-import aboutMeData from "@/data/aboutMe.json";
-import CompetencySection from "@/components/layouts/CompetencySection";
-import SkillSection from "@/components/layouts/SkillSection";
-import {Toaster} from "sonner";
-import ProjectSection from "@/components/layouts/ProjectSection";
-import dynamic from "next/dynamic";
+import Header from "@/components/layouts/Header"
+import AboutMeSection from "@/components/layouts/AboutMeSection"
+import aboutMeData from "@/data/aboutMe.json"
+import CompetencySection from "@/components/layouts/CompetencySection"
+import SkillSection from "@/components/layouts/SkillSection"
+import { Toaster } from "sonner"
+import ProjectSection from "@/components/layouts/ProjectSection"
+import dynamic from "next/dynamic"
 
 const FloatingNavigation = dynamic(
   () => import("@/components/layouts/FloatingNavigation")
-);
+)
+
+const aboutMeInfo = {
+  name: aboutMeData.name,
+  src: aboutMeData.profileImg,
+  job: aboutMeData.job,
+  email: aboutMeData.email,
+  githubLink: aboutMeData.githubLink,
+  introductions: aboutMeData.introductions,
+}
 
 export default function Home() {
-  const aboutMeInfo = {
-    name: aboutMeData.name,
-    src: aboutMeData.profileImg,
-    job: aboutMeData.job,
-    email: aboutMeData.email,
-    githubLink: aboutMeData.githubLink,
-    introductions: aboutMeData.introductions,
-  };
-
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-50 font-sans
-          dark:bg-dark">
-      <Header/>
+    <div className="dark:bg-dark flex min-h-screen flex-col items-center justify-center bg-zinc-50 font-sans">
+      <Header />
       <FloatingNavigation />
-      <main className="flex flex-col min-h-screen w-full my-8 max-w-[1100px] px-4 items-center bg-[#FAFAF9]
-              sm:px-6 sm:items-start
-              md:px-8
-              lg:px-16
-              dark:bg-dark">
+      <main className="dark:bg-dark my-8 flex min-h-screen w-full max-w-[1100px] flex-col items-center bg-[#FAFAF9] px-4 sm:items-start sm:px-6 md:px-8 lg:px-16">
         <AboutMeSection aboutMeInfo={aboutMeInfo} />
         <CompetencySection />
         <SkillSection />
@@ -38,5 +33,5 @@ export default function Home() {
       </main>
       <Toaster />
     </div>
-  );
+  )
 }
