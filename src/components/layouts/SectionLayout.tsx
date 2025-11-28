@@ -5,17 +5,19 @@ interface SectionLayoutProps {
   title?: string
   children: React.ReactNode
   sectionId?: string
+  className?: string
 }
 
 export default function SectionLayout({
   title,
   children,
   sectionId,
+  className = "",
 }: SectionLayoutProps) {
   return (
     <div
       id={sectionId}
-      className={"mb-10 h-screen w-full scroll-mt-10 self-stretch"}
+      className={`min-h-screen w-full scroll-mt-10 self-stretch px-4 py-16 sm:px-6 md:px-8 lg:px-16 ${className}`}
     >
       {title && <SectionHeader title={title} />}
       {children}

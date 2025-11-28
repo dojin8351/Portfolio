@@ -1,13 +1,35 @@
 {
-  "name" : "김도현",
-  "profileImg" : "/bijeuniseu-salam-eul-gajanghaneun-gwiyeoun-gang-aji.jpg",
-  "job" : "프론트엔드",
-  "githubLink" : "https://github.com/dojin8351",
-  "email" : "dojin8351@gmail.com",
-  "introductions" : [
+  "name": "김도현",
+  "profileImg": "/bijeuniseu-salam-eul-gajanghaneun-gwiyeoun-gang-aji.jpg",
+  "job": "프론트엔드",
+  "githubLink": "https://github.com/dojin8351",
+  "email": "dojin8351@gmail.com",
+  "introductions": [
     "React.js와 Next.js를 활용한 모던 웹 애플리케이션 개발 경험이 있습니다.",
     "TypeScript와 JavaScript(ES6+)를 활용한 타입 안정성 있는 코드 작성에 능숙합니다.",
     "다양한 직무 경험을 바탕으로 기획자, 디자이너와의 원활한 협업이 가능합니다.",
     "지속적인 학습과 성장을 통해 사용자 경험을 개선하는 개발을 추구합니다."
+  ],
+  "achievements": [
+    {
+      "type": "certification",
+      "title": "SQLD",
+      "organization": "데이터자격검정",
+      "date": "2025.04",
+      "description": "SQLD는 데이터베이스와 SQL(Structured Query Language) 활용 능력을 인증하는 국가공인 자격증"
+    },
+    {
+      "type": "education",
+      "title": "SSAFY",
+      "organization": "삼성청년 SW AI 아카데미",
+      "date": "2025.01 - 2025.12",
+      "description": "삼성이 주관하고, 고용노동부가 후원하는 “청년 취업프로그램“ |SW·AI 교육, 취업 지원, 코딩 교육, IT교육"
+    },
+    {
+      "type": "award",
+      "title": "SSAFY 프로젝트 우수상",
+      "organization": "FoBank",
+      "description": "특화 프로젝트 우수 성과 인정"
+    }
   ]
 }

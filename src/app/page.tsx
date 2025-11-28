@@ -19,6 +19,7 @@ const aboutMeInfo = {
   email: aboutMeData.email,
   githubLink: aboutMeData.githubLink,
   introductions: aboutMeData.introductions,
+  achievements: aboutMeData.achievements,
 }
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
     <div className="dark:bg-dark flex min-h-screen flex-col items-center justify-center bg-zinc-50 font-sans">
       {/*<Header />*/}
       <FloatingNavigation />
-      <main className="dark:bg-dark flex min-h-screen w-full max-w-[1100px] flex-col items-center bg-[#FAFAF9] px-4 sm:items-start sm:px-6 md:px-8 lg:px-16">
+      <main className="dark:bg-dark flex min-h-screen w-full max-w-[1100px] flex-col items-center bg-[#FAFAF9] sm:items-start">
         <AboutMeSection aboutMeInfo={aboutMeInfo} />
         <CompetencySection />
         <SkillSection />

@@ -2,6 +2,7 @@ import ProfileAvatar from "@/components/about-me/ProfileAvatar"
 import { AboutMeType } from "@/types/aboutMe"
 import EmailClipboardButton from "@/components/about-me/EmailClipboardButton"
 import GitHubLinkButton from "@/components/about-me/GitHubLinkButton"
+import AchievementTimeline from "@/components/about-me/AchievementTimeline"
 import FadeInSection from "@/components/layouts/FadeInSection"
 import SectionLayout from "@/components/layouts/SectionLayout"
 interface AboutMeProps {
@@ -14,7 +15,7 @@ export default function AboutMeSection({ aboutMeInfo }: AboutMeProps) {
       <SectionLayout sectionId="about-me">
         <div
           className={
-            "flex w-full flex-col items-center gap-4 pt-15 sm:flex-row sm:items-center sm:gap-6 md:gap-10"
+            "flex w-full flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-6 md:gap-10"
           }
         >
           <ProfileAvatar src={aboutMeInfo?.src} />
@@ -52,6 +53,9 @@ export default function AboutMeSection({ aboutMeInfo }: AboutMeProps) {
             </li>
           ))}
         </ul>
+        {aboutMeInfo?.achievements && (
+          <AchievementTimeline achievements={aboutMeInfo.achievements} />
+        )}
       </SectionLayout>
     </FadeInSection>
   )
