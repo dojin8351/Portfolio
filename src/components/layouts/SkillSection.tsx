@@ -1,8 +1,10 @@
 import SectionLayout from "@/components/layouts/SectionLayout"
-import FadeInSection from "@/components/layouts/FadeInSection"
+import dynamic from "next/dynamic"
 import SkillTabs from "@/components/skill/SkillTabs"
 import skillData from "@/data/skills.json"
 import { SkillData } from "@/types/competency"
+
+const FadeInSection = dynamic(() => import("@/components/layouts/FadeInSection"))
 
 export default function SkillSection() {
   const data = skillData as SkillData

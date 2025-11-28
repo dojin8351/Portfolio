@@ -3,8 +3,12 @@ import { AboutMeType } from "@/types/aboutMe"
 import EmailClipboardButton from "@/components/about-me/EmailClipboardButton"
 import GitHubLinkButton from "@/components/about-me/GitHubLinkButton"
 import AchievementTimeline from "@/components/about-me/AchievementTimeline"
-import FadeInSection from "@/components/layouts/FadeInSection"
+import dynamic from "next/dynamic"
 import SectionLayout from "@/components/layouts/SectionLayout"
+
+const FadeInSection = dynamic(
+  () => import("@/components/layouts/FadeInSection")
+)
 interface AboutMeProps {
   aboutMeInfo: AboutMeType
 }

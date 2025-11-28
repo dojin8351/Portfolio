@@ -2,7 +2,9 @@ import CompetencyCard from "@/components/competency/CompetencyCard"
 import competencyData from "@/data/competency.json"
 import { CompetencyData } from "@/types/competency"
 import SectionLayout from "@/components/layouts/SectionLayout"
-import FadeInSection from "@/components/layouts/FadeInSection"
+import dynamic from "next/dynamic"
+
+const FadeInSection = dynamic(() => import("@/components/layouts/FadeInSection"))
 
 export default function CompetencySection() {
   const data = competencyData as CompetencyData

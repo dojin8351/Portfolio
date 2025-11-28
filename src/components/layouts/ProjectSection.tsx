@@ -2,7 +2,9 @@ import SectionLayout from "@/components/layouts/SectionLayout"
 import ProjectCard from "@/components/project/ProjectCard"
 import projectData from "@/data/project.json"
 import { ProjectData } from "@/types/project"
-import FadeInSection from "@/components/layouts/FadeInSection"
+import dynamic from "next/dynamic"
+
+const FadeInSection = dynamic(() => import("@/components/layouts/FadeInSection"))
 
 export default function ProjectSection() {
   const data = projectData as ProjectData

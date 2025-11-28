@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/dialog"
 import Image from "next/image"
 import { ImgType } from "@/types/competency"
+import { generateBlurDataURL } from "@/lib/imageUtils"
 
 interface ProjectImageCarouselProps {
   images: ImgType[]
@@ -73,7 +74,10 @@ function ImageDialog({ image, images, initialIndex }: ImageDialogProps) {
             height={500}
             className="mt-5 h-auto w-full rounded-md border border-gray-200 object-cover transition-opacity group-hover:opacity-90 dark:border-gray-700"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-            loading={initialIndex < 3 ? undefined : "lazy"}
+            priority={initialIndex < 3}
+            placeholder="blur"
+            blurDataURL={generateBlurDataURL(800, 500)}
+            quality={85}
           />
           <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/10">
             <div className="rounded-full bg-white/80 p-2 opacity-0 transition-opacity group-hover:opacity-100">
@@ -117,6 +121,9 @@ function ImageDialog({ image, images, initialIndex }: ImageDialogProps) {
                       className="max-h-full max-w-full rounded-md border border-gray-200 object-contain dark:border-gray-700"
                       sizes="(100vw - 5rem)"
                       priority={dialogIndex === initialIndex}
+                      placeholder="blur"
+                      blurDataURL={generateBlurDataURL(1920, 1080)}
+                      quality={90}
                     />
                   </div>
                 </CarouselItem>

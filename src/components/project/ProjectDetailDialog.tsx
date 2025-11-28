@@ -8,11 +8,17 @@ import {
 import { Button } from "@/components/ui/button"
 import { Project } from "@/types/project"
 import LogoIcon from "@/components/ui/LogoIcon"
-import ProjectImageCarousel from "./ProjectImageCarousel"
+import dynamic from "next/dynamic"
 import React from "react"
 import ProjectDescriptionAccordion from "@/components/project/ProjectDescriptionAccordion"
 import ProjectDetailField from "./ProjectDetailField"
 import ProjectMetaGrid from "./ProjectMetaGrid"
+
+const ProjectImageCarousel = dynamic(() => import("./ProjectImageCarousel"), {
+  loading: () => (
+    <div className="mt-5 h-64 w-full animate-pulse rounded-md bg-gray-200 dark:bg-gray-700" />
+  ),
+})
 
 interface ProjectDetailDialogProps {
   projectInfo: Project
