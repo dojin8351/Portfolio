@@ -13,6 +13,7 @@ interface LogoBadgeProps {
   size?: number
   wrapperSize?: number
   className?: string
+  blur: boolean
 }
 
 function LogoIcon({
@@ -20,34 +21,69 @@ function LogoIcon({
   alt,
   size = 40,
   wrapperSize = 66,
+  blur,
   className,
 }: LogoBadgeProps) {
+  // className에 width가 포함되어 있으면 style을 사용하지 않음
+  const hasWidthInClassName =
+    className?.includes("w-") || className?.includes("width")
+  const wrapperStyle = hasWidthInClassName ? undefined : { width: wrapperSize }
+  const innerStyle = hasWidthInClassName
+    ? undefined
+    : { width: size, height: size }
+
   return (
     <Tooltip>
       <TooltipTrigger>
-        <div
-          className={cn(
-            "flex aspect-square items-center justify-center rounded-xl border border-gray-200 bg-white p-2 transition-all duration-200",
-            "hover:shadow-md dark:border-gray-700 dark:bg-gray-100 dark:hover:shadow-lg",
-            className
-          )}
-          style={{ width: wrapperSize }}
-        >
+        {blur ? (
           <div
-            className="relative flex flex-shrink-0 items-center justify-center"
-            style={{ width: size, height: size }}
+            className={cn(
+              "flex aspect-square items-center justify-center rounded-xl border border-gray-200 bg-white p-2 blur-sm transition-all duration-200",
+              "hover:shadow-md dark:border-gray-700 dark:bg-gray-100 dark:hover:shadow-lg",
+              className
+            )}
+            style={wrapperStyle}
           >
-            <Image
-              src={src}
-              alt={alt}
-              width={size}
-              height={size}
-              className="object-contain"
-              sizes={`${size}px`}
-              loading="lazy"
-            />
+            <div
+              className="relative flex flex-shrink-0 items-center justify-center"
+              style={innerStyle}
+            >
+              <Image
+                src={src}
+                alt={alt}
+                width={size}
+                height={size}
+                className="object-contain"
+                sizes={`${size}px`}
+                loading="lazy"
+              />
+            </div>
           </div>
-        </div>
+        ) : (
+          <div
+            className={cn(
+              "flex aspect-square items-center justify-center rounded-xl border border-gray-200 bg-white p-2 blur-none transition-all duration-200",
+              "hover:shadow-md dark:border-gray-700 dark:bg-gray-100 dark:hover:shadow-lg",
+              className
+            )}
+            style={wrapperStyle}
+          >
+            <div
+              className="relative flex flex-shrink-0 items-center justify-center"
+              style={innerStyle}
+            >
+              <Image
+                src={src}
+                alt={alt}
+                width={size}
+                height={size}
+                className="object-contain"
+                sizes={`${size}px`}
+                loading="lazy"
+              />
+            </div>
+          </div>
+        )}
       </TooltipTrigger>
       <TooltipContent className="dark:shadow-2xl">{alt}</TooltipContent>
     </Tooltip>

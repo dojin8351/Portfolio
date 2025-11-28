@@ -1,24 +1,25 @@
 export interface ImgType {
-  src: string;
-  alt: string;
+  src: string
+  alt: string
+  status: string
 }
 
 export interface CompetencyType {
-  title: string;
-  description: string;
-  logos: ImgType[];
+  title: string
+  description: string
+  logos: ImgType[]
 }
 
 export interface CompetencyData {
-  competencies: CompetencyType[];
+  competencies: CompetencyType[]
 }
 
 export interface SkillType {
-  title : string
-  logos : ImgType[]
+  src: string
+  alt: string
+  status: string
 }
 
 export interface SkillData {
-  skills : SkillType[]
+  skills: SkillType[]
 }
-

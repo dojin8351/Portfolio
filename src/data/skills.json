@@ -1,44 +1,109 @@
 {
   "skills": [
     {
-      "title" : "프론트엔드",
-      "logos" : [
-        { "src": "/logos/frontend/React.svg", "alt": "React" },
-        { "src": "/logos/frontend/Next.js.svg", "alt": "Next.js" },
-        { "src": "/logos/frontend/TypeScript.svg", "alt": "TypeScript" },
-        { "src": "/logos/frontend/JavaScript.svg", "alt": "JavaScript" },
-        { "src": "/logos/frontend/HTML5.svg", "alt": "HTML"},
-        { "src": "/logos/frontend/CSS3.svg", "alt": "CSS3"},
-        { "src": "/logos/frontend/Node.js.svg", "alt": "Node.js"},
-        { "src": "/logos/frontend/Tailwind CSS.svg", "alt": "Tailwind CSS"}
-      ]
+      "src": "/logos/frontend/React.svg",
+      "alt": "React",
+      "status": "Frontend"
     },
     {
-      "title" : "백엔드",
-      "logos" : [
-        { "src": "/logos/backend/IntelliJ IDEA.svg", "alt": "IntelliJ IDEA" },
-        { "src": "/logos/backend/Java.svg", "alt": "Java" },
-        { "src": "/logos/backend/PostgresSQL.svg", "alt": "PostgresSQL" },
-        { "src": "/logos/backend/MySQL.svg", "alt": "MySQL" },
-        { "src": "/logos/backend/Redis.svg", "alt": "Redis"},
-        { "src": "/logos/backend/Spring.svg", "alt": "Spring"},
-        { "src": "/logos/backend/MongoDB.svg", "alt": "MongoDB"}
-      ]
-
+      "src": "/logos/frontend/Next.js.svg",
+      "alt": "Next.js",
+      "status": "Frontend"
     },
     {
-      "title" : "협업",
-      "logos" : [
-        { "src": "/logos/collaboration/Figma.svg", "alt": "Figma" },
-        { "src": "/logos/collaboration/GitHub.svg", "alt": "GitHub" },
-        { "src": "/logos/collaboration/GitLab.svg", "alt": "GitLab" },
-        { "src": "/logos/collaboration/Jira.svg", "alt": "Jira" },
-        { "src": "/logos/collaboration/Postman.svg", "alt": "Postman"},
-        { "src": "/logos/collaboration/Sourcetree.svg", "alt": "Sourcetree"},
-        { "src": "/logos/collaboration/Swagger.svg", "alt": "Swagger"}
-
-      ]
-
+      "src": "/logos/frontend/TypeScript.svg",
+      "alt": "TypeScript",
+      "status": "Frontend"
+    },
+    {
+      "src": "/logos/frontend/JavaScript.svg",
+      "alt": "JavaScript",
+      "status": "Frontend"
+    },
+    { "src": "/logos/frontend/HTML5.svg", "alt": "HTML", "status": "Frontend" },
+    { "src": "/logos/frontend/CSS3.svg", "alt": "CSS3", "status": "Frontend" },
+    {
+      "src": "/logos/frontend/Node.js.svg",
+      "alt": "Node.js",
+      "status": "Frontend"
+    },
+    {
+      "src": "/logos/frontend/Tailwind CSS.svg",
+      "alt": "Tailwind CSS",
+      "status": "Frontend"
+    },
+    {
+      "src": "/logos/frontend/OpenVidu.png",
+      "alt": "OpenVidu",
+      "status": "Frontend"
+    },
+    {
+      "src": "/logos/frontend/ReactQuery.svg",
+      "alt": "ReactQuery",
+      "status": "Frontend"
+    },
+    {
+      "src": "/logos/frontend/WebSocket.svg",
+      "alt": "WebSocket",
+      "status": "Frontend"
+    },
+    {
+      "src": "/logos/backend/IntelliJ IDEA.svg",
+      "alt": "IntelliJ IDEA",
+      "status": "Backend"
+    },
+    { "src": "/logos/backend/Java.svg", "alt": "Java", "status": "Backend" },
+    {
+      "src": "/logos/backend/PostgresSQL.svg",
+      "alt": "PostgresSQL",
+      "status": "Backend"
+    },
+    { "src": "/logos/backend/MySQL.svg", "alt": "MySQL", "status": "Backend" },
+    { "src": "/logos/backend/Redis.svg", "alt": "Redis", "status": "Backend" },
+    {
+      "src": "/logos/backend/Spring.svg",
+      "alt": "Spring",
+      "status": "Backend"
+    },
+    {
+      "src": "/logos/backend/MongoDB.svg",
+      "alt": "MongoDB",
+      "status": "Backend"
+    },
+    {
+      "src": "/logos/collaboration/GitHub.svg",
+      "alt": "GitHub",
+      "status": "DevOps"
+    },
+    {
+      "src": "/logos/collaboration/GitLab.svg",
+      "alt": "GitLab",
+      "status": "DevOps"
+    },
+    {
+      "src": "/logos/collaboration/Figma.svg",
+      "alt": "Figma",
+      "status": "Tools"
+    },
+    {
+      "src": "/logos/collaboration/Jira.svg",
+      "alt": "Jira",
+      "status": "Tools"
+    },
+    {
+      "src": "/logos/collaboration/Postman.svg",
+      "alt": "Postman",
+      "status": "Tools"
+    },
+    {
+      "src": "/logos/collaboration/Sourcetree.svg",
+      "alt": "Sourcetree",
+      "status": "Tools"
+    },
+    {
+      "src": "/logos/collaboration/Swagger.svg",
+      "alt": "Swagger",
+      "status": "Tools"
     }
   ]
 }

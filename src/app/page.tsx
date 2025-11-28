@@ -6,6 +6,7 @@ import SkillSection from "@/components/layouts/SkillSection"
 import { Toaster } from "@/components/ui/sonner"
 import ProjectSection from "@/components/layouts/ProjectSection"
 import dynamic from "next/dynamic"
+import SkillTabs from "@/components/skill/SkillTabs"
 
 const FloatingNavigation = dynamic(
   () => import("@/components/layouts/FloatingNavigation")
@@ -23,9 +24,9 @@ const aboutMeInfo = {
 export default function Home() {
   return (
     <div className="dark:bg-dark flex min-h-screen flex-col items-center justify-center bg-zinc-50 font-sans">
-      <Header />
+      {/*<Header />*/}
       <FloatingNavigation />
-      <main className="dark:bg-dark my-8 flex min-h-screen w-full max-w-[1100px] flex-col items-center bg-[#FAFAF9] px-4 sm:items-start sm:px-6 md:px-8 lg:px-16">
+      <main className="dark:bg-dark flex min-h-screen w-full max-w-[1100px] flex-col items-center bg-[#FAFAF9] px-4 sm:items-start sm:px-6 md:px-8 lg:px-16">
         <AboutMeSection aboutMeInfo={aboutMeInfo} />
         <CompetencySection />
         <SkillSection />

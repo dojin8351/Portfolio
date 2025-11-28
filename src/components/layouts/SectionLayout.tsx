@@ -2,7 +2,7 @@ import React from "react"
 import SectionHeader from "@/components/layouts/SectionHeader"
 
 interface SectionLayoutProps {
-  title: string
+  title?: string
   children: React.ReactNode
   sectionId?: string
 }
@@ -15,9 +15,9 @@ export default function SectionLayout({
   return (
     <div
       id={sectionId}
-      className={"mt-10 mb-10 w-full scroll-mt-20 self-stretch"}
+      className={"mb-10 h-screen w-full scroll-mt-10 self-stretch"}
     >
-      <SectionHeader title={title} />
+      {title && <SectionHeader title={title} />}
       {children}
     </div>
   )
