@@ -180,7 +180,6 @@ h4 {
     }
 }
 
-/* 커스텀 스크롤바 스타일 */
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
@@ -215,4 +214,26 @@ h4 {
 
 .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(107, 114, 128, 0.8);
+}
+
+::selection {
+  background-color: rgba(135, 206, 250, 0.4);
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: rgba(135, 206, 250, 0.4);
+  color: inherit;
+}
+
+.dark ::selection {
+  background-color: rgba(255, 215, 0, 0.5);
+  color: rgba(255, 255, 200, 0.95);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+.dark ::-moz-selection {
+  background-color: rgba(255, 215, 0, 0.5);
+  color: rgba(255, 255, 200, 0.95);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
 }

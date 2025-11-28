@@ -29,7 +29,7 @@ export default function SkillTabs({ imgs }: SkillTabsProps) {
         onValueChange={setActiveTab}
         className="flex w-full flex-col gap-4 sm:flex-row sm:items-start"
       >
-        <TabsList className="flex w-full flex-row gap-2 border border-gray-200 bg-white p-2 px-2 sm:h-auto sm:w-auto sm:flex-col sm:gap-1 sm:px-3">
+        <TabsList className="flex w-full flex-row gap-2 border border-gray-200 bg-white p-2 px-2 sm:h-auto sm:w-auto sm:flex-col sm:gap-1 sm:px-3 dark:bg-gray-700">
           {tabKeys.map((key) => {
             const tabValue = key.toLowerCase()
             return (
@@ -37,7 +37,7 @@ export default function SkillTabs({ imgs }: SkillTabsProps) {
                 key={key}
                 value={tabValue}
                 className={cn(
-                  "flex-1 transition-all duration-300 sm:w-full sm:flex-none",
+                  "my-1.5 flex-1 cursor-pointer transition-all duration-300 sm:w-full sm:flex-none",
                   activeTab === tabValue &&
                     "relative scale-105 rounded-full px-3 py-1"
                 )}

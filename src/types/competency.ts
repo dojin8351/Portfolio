@@ -7,7 +7,6 @@ export interface ImgType {
 export interface CompetencyType {
   title: string
   description: string
-  logos: ImgType[]
 }
 
 export interface CompetencyData {

@@ -14,7 +14,6 @@ export default function CompetencySection() {
           {data.competencies.map((competency) => (
             <CompetencyCard
               key={competency.title}
-              logos={competency.logos}
               title={competency.title}
               description={competency.description}
             />
