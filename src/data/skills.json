@@ -3,107 +3,164 @@
     {
       "src": "/logos/frontend/React.svg",
       "alt": "React",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 95
+    },
+    {
+      "src": "/logos/frontend/ReactNative.svg",
+      "alt": "ReactNative",
+      "status": "Frontend",
+      "proficiency": 90
     },
     {
       "src": "/logos/frontend/Next.js.svg",
       "alt": "Next.js",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 85
     },
     {
       "src": "/logos/frontend/TypeScript.svg",
       "alt": "TypeScript",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 90
     },
     {
       "src": "/logos/frontend/JavaScript.svg",
       "alt": "JavaScript",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 90
     },
-    { "src": "/logos/frontend/HTML5.svg", "alt": "HTML", "status": "Frontend" },
-    { "src": "/logos/frontend/CSS3.svg", "alt": "CSS3", "status": "Frontend" },
+    {
+      "src": "/logos/frontend/HTML5.svg",
+      "alt": "HTML",
+      "status": "Frontend",
+      "proficiency": 90
+    },
+    {
+      "src": "/logos/frontend/CSS3.svg",
+      "alt": "CSS3",
+      "status": "Frontend",
+      "proficiency": 90
+    },
     {
       "src": "/logos/frontend/Node.js.svg",
       "alt": "Node.js",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 70
     },
     {
       "src": "/logos/frontend/Tailwind CSS.svg",
       "alt": "Tailwind CSS",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 90
     },
     {
       "src": "/logos/frontend/OpenVidu.png",
       "alt": "OpenVidu",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 75
     },
     {
       "src": "/logos/frontend/ReactQuery.svg",
       "alt": "ReactQuery",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 85
     },
     {
       "src": "/logos/frontend/WebSocket.svg",
       "alt": "WebSocket",
-      "status": "Frontend"
+      "status": "Frontend",
+      "proficiency": 85
     },
     {
-      "src": "/logos/backend/IntelliJ IDEA.svg",
-      "alt": "IntelliJ IDEA",
-      "status": "Backend"
+      "src": "/logos/frontend/zustand.svg",
+      "alt": "Zustand",
+      "status": "Frontend",
+      "proficiency": 85
     },
-    { "src": "/logos/backend/Java.svg", "alt": "Java", "status": "Backend" },
+    {
+      "src": "/logos/frontend/Expo.svg",
+      "alt": "Expo",
+      "status": "Frontend",
+      "proficiency": 70
+    },
+    {
+      "src": "/logos/backend/Java.svg",
+      "alt": "Java",
+      "status": "Backend",
+      "proficiency": 90
+    },
     {
       "src": "/logos/backend/PostgresSQL.svg",
       "alt": "PostgresSQL",
-      "status": "Backend"
+      "status": "Backend",
+      "proficiency": 70
     },
-    { "src": "/logos/backend/MySQL.svg", "alt": "MySQL", "status": "Backend" },
-    { "src": "/logos/backend/Redis.svg", "alt": "Redis", "status": "Backend" },
+    {
+      "src": "/logos/backend/MySQL.svg",
+      "alt": "MySQL",
+      "status": "Backend",
+      "proficiency": 80
+    },
+    {
+      "src": "/logos/backend/Redis.svg",
+      "alt": "Redis",
+      "status": "Backend",
+      "proficiency": 70
+    },
     {
       "src": "/logos/backend/Spring.svg",
       "alt": "Spring",
-      "status": "Backend"
+      "status": "Backend",
+      "proficiency": 85
     },
     {
       "src": "/logos/backend/MongoDB.svg",
       "alt": "MongoDB",
-      "status": "Backend"
+      "status": "Backend",
+      "proficiency": 70
     },
     {
       "src": "/logos/collaboration/GitHub.svg",
       "alt": "GitHub",
-      "status": "DevOps"
+      "status": "DevOps",
+      "proficiency": 90
     },
     {
       "src": "/logos/collaboration/GitLab.svg",
       "alt": "GitLab",
-      "status": "DevOps"
+      "status": "DevOps",
+      "proficiency": 90
     },
     {
       "src": "/logos/collaboration/Figma.svg",
       "alt": "Figma",
-      "status": "Tools"
+      "status": "Tools",
+      "proficiency": 80
     },
     {
       "src": "/logos/collaboration/Jira.svg",
       "alt": "Jira",
-      "status": "Tools"
+      "status": "Tools",
+      "proficiency": 80
     },
     {
       "src": "/logos/collaboration/Postman.svg",
       "alt": "Postman",
-      "status": "Tools"
+      "status": "Tools",
+      "proficiency": 90
     },
     {
       "src": "/logos/collaboration/Sourcetree.svg",
       "alt": "Sourcetree",
-      "status": "Tools"
+      "status": "Tools",
+      "proficiency": 75
     },
     {
       "src": "/logos/collaboration/Swagger.svg",
       "alt": "Swagger",
-      "status": "Tools"
+      "status": "Tools",
+      "proficiency": 80
     }
   ]
 }

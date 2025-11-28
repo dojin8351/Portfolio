@@ -17,6 +17,7 @@ export interface SkillType {
   src: string
   alt: string
   status: string
+  proficiency: number
 }
 
 export interface SkillData {

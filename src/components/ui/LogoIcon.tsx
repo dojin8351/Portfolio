@@ -6,6 +6,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { Progress } from "@/components/ui/progress"
 
 interface LogoBadgeProps {
   src: string
@@ -14,6 +15,7 @@ interface LogoBadgeProps {
   wrapperSize?: number
   className?: string
   blur: boolean
+  proficiency?: number
 }
 
 function LogoIcon({
@@ -23,6 +25,7 @@ function LogoIcon({
   wrapperSize = 66,
   blur,
   className,
+  proficiency,
 }: LogoBadgeProps) {
   // className에 width가 포함되어 있으면 style을 사용하지 않음
   const hasWidthInClassName =
@@ -85,7 +88,15 @@ function LogoIcon({
           </div>
         )}
       </TooltipTrigger>
-      <TooltipContent className="dark:shadow-2xl">{alt}</TooltipContent>
+      <TooltipContent className="dark:shadow-2xl">
+        <p className="my-2 font-medium">{alt}</p>
+        {proficiency && (
+          <div className="mb-2 flex flex-row items-center gap-2 text-sm">
+            <Progress value={proficiency} className="w-[125px]" />
+            <p>{proficiency}%</p>
+          </div>
+        )}
+      </TooltipContent>
     </Tooltip>
   )
 }

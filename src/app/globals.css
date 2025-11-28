@@ -227,7 +227,7 @@ h4 {
 }
 
 .dark ::selection {
-  background-color: rgba(255, 215, 0, 0.5);
+  background-color: rgba(255, 227, 65, 0.787);
   color: rgba(255, 255, 200, 0.95);
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
 }

@@ -7,12 +7,13 @@ import SkillsCard from "@/components/skill/SkillsCard"
 import { cn } from "@/lib/utils"
 import { useDarkMode } from "@/hooks/useDarkMode"
 import { getActiveItemStyle } from "@/utils/activeItemStyle"
+import { SkillType } from "@/types/competency"
 
 interface SkillTabsProps {
-  imgs: ImgType[]
+  skillInfo: SkillType[]
 }
 
-export default function SkillTabs({ imgs }: SkillTabsProps) {
+export default function SkillTabs({ skillInfo }: SkillTabsProps) {
   const tabKeys = ["ALL", "Frontend", "Backend", "DevOps", "Tools"]
   const [activeTab, setActiveTab] = useState("all")
   const isDark = useDarkMode()
@@ -23,7 +24,7 @@ export default function SkillTabs({ imgs }: SkillTabsProps) {
   }
 
   return (
-    <div className="mt-5 w-full">
+    <div className="w-full">
       <Tabs
         value={activeTab}
         onValueChange={setActiveTab}
@@ -52,7 +53,7 @@ export default function SkillTabs({ imgs }: SkillTabsProps) {
         <div className="w-full sm:flex-1">
           {tabKeys.map((key) => (
             <TabsContent key={key} value={key.toLowerCase()} className="w-full">
-              <SkillsCard logos={imgs} filter={key} />
+              <SkillsCard skillInfo={skillInfo} filter={key} />
             </TabsContent>
           ))}
         </div>
