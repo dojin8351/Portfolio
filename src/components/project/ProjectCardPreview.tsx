@@ -33,6 +33,7 @@ function ProjectCardPreview({
               key={index}
               size={30}
               wrapperSize={45}
+              blur={false}
               className="rounded-sm px-1 py-1"
             />
           ))}

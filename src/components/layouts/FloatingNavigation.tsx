@@ -23,7 +23,7 @@ export default function FloatingNavigation() {
   }
 
   return (
-    <div className="fixed top-2 left-1/2 z-50 flex h-12 -translate-x-1/2 items-center rounded-full border border-gray-200/50 bg-white/70 px-6 whitespace-nowrap shadow-lg backdrop-blur-2xl sm:h-12 sm:px-10 dark:border-gray-700/50 dark:bg-gray-900/60">
+    <div className="fixed bottom-10 left-1/2 z-50 flex h-12 -translate-x-1/2 items-center rounded-full border border-gray-200/50 bg-white/70 px-6 whitespace-nowrap shadow-lg backdrop-blur-2xl sm:h-12 sm:px-10 dark:border-gray-700/50 dark:bg-gray-900/60">
       <div className="flex flex-row items-center gap-4 font-medium sm:gap-6 dark:text-white">
         <p
           className={`cursor-pointer text-sm transition-all duration-300 hover:text-blue-500 sm:text-base ${getActiveClass("about-me")}`}
