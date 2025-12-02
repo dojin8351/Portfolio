@@ -18,20 +18,25 @@ export default function ProjectMetaGrid({
   className = "",
 }: ProjectMetaGridProps) {
   return (
-    <div className={`mt-2 mb-2 flex flex-col gap-4 overflow-x-hidden sm:flex-row sm:gap-6 md:gap-8 ${className}`}>
+    <div
+      className={`flex flex-col gap-4 overflow-x-hidden sm:flex-row sm:gap-6 md:gap-8 ${className}`}
+    >
       {items.map((item) => (
         <div key={item.label} className="min-w-0">
-          <p className="mb-1 text-xs text-gray-400 sm:text-sm dark:text-gray-500">{item.label}</p>
-          <div className="text-xs text-gray-700 sm:text-sm dark:text-gray-300 break-words">
-            {item.value}
+          <p className="mb-1 text-sm font-medium text-gray-400 dark:text-gray-400">
+            {item.label}
+          </p>
+          <div className="text-sm break-words text-gray-700 dark:text-gray-200">
+            {item.value || "-"}
           </div>
         </div>
       ))}
-      <div className="min-w-0">
-        <p className="mb-1 text-xs text-gray-400 sm:text-sm dark:text-gray-500">관련 링크</p>
+      <div className="w-fit min-w-0">
+        <p className="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+          관련 링크
+        </p>
         <GitHubLinkButton githubLink={githubLink} />
       </div>
     </div>
   )
 }
-

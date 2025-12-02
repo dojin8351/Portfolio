@@ -16,8 +16,10 @@ export default function ProjectDetailField({
   contentClassName = "",
 }: ProjectDetailFieldProps) {
   return (
-    <div className={className}>
-      <p className={`mb-2 text-gray-400 dark:text-gray-500 ${labelClassName}`}>
+    <div className={`mb-4 ${className}`}>
+      <p
+        className={`text-md mb-2 font-bold text-gray-800 dark:text-gray-400 ${labelClassName}`}
+      >
         {label}
       </p>
       <div
@@ -28,4 +30,3 @@ export default function ProjectDetailField({
     </div>
   )
 }
-

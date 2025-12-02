@@ -71,15 +71,17 @@ function ProjectDetailDialog({ projectInfo }: ProjectDetailDialogProps) {
           ))}
         </div>
       </ProjectDetailField>
-      <ProjectMetaGrid
-        items={[
-          { label: "참여인원", value: projectInfo.team },
-          { label: "기간", value: projectInfo.period },
-          { label: "역할", value: projectInfo.role },
-        ]}
-        githubLink={projectInfo.githubLink}
-      />
-      <hr />
+      <ProjectDetailField label="프로젝트 정보">
+        <ProjectMetaGrid
+          items={[
+            { label: "참여인원", value: projectInfo.team },
+            { label: "기간", value: projectInfo.period },
+            { label: "역할", value: projectInfo.role },
+          ]}
+          githubLink={projectInfo.githubLink}
+        />
+      </ProjectDetailField>
+      <hr className="my-4" />
       <ProjectDetailField label="상세 내용">
         <ProjectDescriptionAccordion
           projectDescription={projectInfo.projectDescription}
