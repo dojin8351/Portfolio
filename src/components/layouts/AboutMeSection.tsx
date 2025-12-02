@@ -2,12 +2,11 @@ import ProfileAvatar from "@/components/about-me/ProfileAvatar"
 import { AboutMeType } from "@/types/aboutMe"
 import EmailClipboardButton from "@/components/about-me/EmailClipboardButton"
 import GitHubLinkButton from "@/components/about-me/GitHubLinkButton"
-import AchievementTimeline from "@/components/about-me/AchievementTimeline"
-import dynamic from "next/dynamic"
 import SectionLayout from "@/components/layouts/SectionLayout"
+import dynamic from "next/dynamic"
 
-const FadeInSection = dynamic(
-  () => import("@/components/layouts/FadeInSection")
+const AchievementTimeline = dynamic(
+  () => import("@/components/about-me/AchievementTimeline")
 )
 interface AboutMeProps {
   aboutMeInfo: AboutMeType
@@ -15,11 +14,10 @@ interface AboutMeProps {
 
 export default function AboutMeSection({ aboutMeInfo }: AboutMeProps) {
   return (
-    <FadeInSection>
-      <SectionLayout sectionId="about-me">
+    <SectionLayout sectionId="about-me">
         <div
           className={
-            "flex w-full flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-6 md:gap-10"
+            "flex w-full flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-4 md:gap-6 lg:gap-10"
           }
         >
           <ProfileAvatar src={aboutMeInfo?.profileImg} />
@@ -30,7 +28,7 @@ export default function AboutMeSection({ aboutMeInfo }: AboutMeProps) {
           >
             <h1
               className={
-                "md:text-h1 text-xl leading-tight break-words sm:text-2xl"
+                "text-lg leading-tight break-words sm:text-xl md:text-2xl md:text-h1"
               }
             >
               <span>안녕하세요,</span>{" "}
@@ -51,7 +49,7 @@ export default function AboutMeSection({ aboutMeInfo }: AboutMeProps) {
         </div>
         <ul
           className={
-            "mt-6 w-full space-y-2 text-sm text-gray-700 sm:mt-8 sm:text-base dark:text-gray-400"
+            "mt-4 w-full space-y-2 text-xs text-gray-700 sm:mt-6 sm:text-sm md:mt-8 md:text-base dark:text-gray-400"
           }
         >
           {aboutMeInfo?.introductions?.map((intro, index) => (
@@ -64,6 +62,5 @@ export default function AboutMeSection({ aboutMeInfo }: AboutMeProps) {
           <AchievementTimeline achievements={aboutMeInfo.achievements} />
         )}
       </SectionLayout>
-    </FadeInSection>
   )
 }

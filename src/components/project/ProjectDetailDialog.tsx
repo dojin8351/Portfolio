@@ -27,17 +27,17 @@ interface ProjectDetailDialogProps {
 function ProjectDetailDialog({ projectInfo }: ProjectDetailDialogProps) {
   return (
     <DialogContent
-      className="custom-scrollbar h-[85vh] !w-[80vw] !max-w-[80vw] overflow-y-auto dark:bg-gray-800 dark:text-white"
+      className="custom-scrollbar h-[85vh] !w-[95vw] !max-w-[95vw] overflow-x-hidden overflow-y-auto dark:bg-gray-800 dark:text-white sm:!w-[80vw] sm:!max-w-[80vw]"
       showCloseButton={false}
     >
-      <DialogHeader className="mb-4 flex flex-row items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-700">
-        <DialogTitle className="text-xl font-semibold">
+      <DialogHeader className="relative mb-4 border-b border-gray-200 pb-4 dark:border-gray-700">
+        <DialogTitle className="text-base font-semibold leading-tight sm:text-lg md:text-xl pr-8">
           {projectInfo.title}
         </DialogTitle>
-        <DialogClose className="ring-offset-background focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
+        <DialogClose className="absolute top-0 right-0 flex items-start pt-0.5 ring-offset-background focus:ring-ring rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-600 dark:text-gray-300"
+            className="h-5 w-5 text-gray-600 dark:text-gray-300 sm:h-6 sm:w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -57,7 +57,7 @@ function ProjectDetailDialog({ projectInfo }: ProjectDetailDialogProps) {
         {projectInfo.description}
       </ProjectDetailField>
       <ProjectDetailField label="기술 스택">
-        <div className="flex flex-row gap-1">
+        <div className="flex flex-row flex-wrap gap-1 overflow-x-hidden">
           {projectInfo.techLogos.map((logo) => (
             <LogoIcon
               src={logo.src}
@@ -66,7 +66,7 @@ function ProjectDetailDialog({ projectInfo }: ProjectDetailDialogProps) {
               size={35}
               wrapperSize={50}
               blur={false}
-              className="rounded-sm px-1 py-1"
+              className="rounded-sm px-1 py-1 shrink-0"
             />
           ))}
         </div>

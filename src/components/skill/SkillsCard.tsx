@@ -11,7 +11,7 @@ interface SkillsCardProps {
 function SkillsCard({ skillInfo, filter }: SkillsCardProps) {
   return (
     <div className="flex w-full flex-col">
-      <div className="grid w-full grid-cols-5 place-items-center gap-2 rounded-2xl border border-gray-200 bg-gray-100 p-3 shadow-sm sm:grid-cols-5 sm:gap-3 sm:p-4 md:grid-cols-6 md:gap-2 md:p-6 lg:gap-5 lg:p-8 dark:bg-gray-800 dark:shadow-md">
+      <div className="grid w-full grid-cols-4 place-items-center gap-1.5 rounded-2xl border border-gray-200 bg-gray-100 p-2 shadow-sm sm:grid-cols-5 sm:gap-2 sm:p-3 md:grid-cols-6 md:gap-2 md:p-4 lg:gap-3 lg:p-6 xl:p-8 dark:bg-gray-800 dark:shadow-md">
         {filter === "ALL"
           ? skillInfo.map((skill, index) => (
               <LogoIcon
@@ -22,7 +22,7 @@ function SkillsCard({ skillInfo, filter }: SkillsCardProps) {
                 wrapperSize={52}
                 blur={false}
                 proficiency={skill.proficiency}
-                className="w-[70px] sm:w-[75px] md:w-[85px] lg:w-[85px] [&>div]:h-8 [&>div]:w-8 sm:[&>div]:h-10 sm:[&>div]:w-10 md:[&>div]:h-12 md:[&>div]:w-12 lg:[&>div]:h-14 lg:[&>div]:w-14"
+                className="w-[60px] sm:w-[70px] md:w-[75px] lg:w-[85px] [&>div]:h-7 [&>div]:w-7 sm:[&>div]:h-8 sm:[&>div]:w-8 md:[&>div]:h-10 md:[&>div]:w-10 lg:[&>div]:h-12 lg:[&>div]:w-12 xl:[&>div]:h-14 xl:[&>div]:w-14"
               />
             ))
           : skillInfo.map((skill, index) => (
@@ -34,7 +34,7 @@ function SkillsCard({ skillInfo, filter }: SkillsCardProps) {
                 wrapperSize={52}
                 blur={skill.status !== filter}
                 proficiency={skill.proficiency}
-                className="w-[70px] sm:w-[75px] md:w-[85px] lg:w-[85px] [&>div]:h-8 [&>div]:w-8 sm:[&>div]:h-10 sm:[&>div]:w-10 md:[&>div]:h-12 md:[&>div]:w-12 lg:[&>div]:h-14 lg:[&>div]:w-14"
+                className="w-[60px] sm:w-[70px] md:w-[75px] lg:w-[85px] [&>div]:h-7 [&>div]:w-7 sm:[&>div]:h-8 sm:[&>div]:w-8 md:[&>div]:h-10 md:[&>div]:w-10 lg:[&>div]:h-12 lg:[&>div]:w-12 xl:[&>div]:h-14 xl:[&>div]:w-14"
               />
             ))}
       </div>

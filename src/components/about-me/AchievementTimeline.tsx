@@ -123,15 +123,15 @@ export default function AchievementTimeline({
   )
 
   return (
-    <div className="mt-7 w-full border-t border-gray-200 pt-8 dark:border-gray-700">
-      <p className="mb-6 text-xl font-semibold text-gray-800 dark:text-gray-200">
+    <div className="mt-5 w-full border-t border-gray-200 pt-6 sm:mt-7 sm:pt-8 dark:border-gray-700">
+      <p className="mb-4 text-lg font-semibold text-gray-800 sm:mb-6 sm:text-xl dark:text-gray-200">
         자격증 · 교육 · 수상 이력
       </p>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {Object.entries(groupedAchievements).map(([type, items]) => (
           <div
             key={type}
-            className="group relative isolate overflow-hidden rounded-xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-5 transition-all duration-300 hover:border-gray-300 hover:shadow-lg dark:border-gray-700 dark:from-gray-800 dark:to-gray-900 dark:hover:border-gray-600"
+            className="group relative isolate overflow-hidden rounded-xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-3 transition-all duration-300 hover:border-gray-300 hover:shadow-lg sm:p-4 md:p-5 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900 dark:hover:border-gray-600"
           >
             {/* 배경 장식 */}
             <div

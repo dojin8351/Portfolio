@@ -17,7 +17,7 @@ export default function SectionLayout({
   return (
     <div
       id={sectionId}
-      className={`min-h-screen w-full self-stretch px-4 py-10 sm:px-6 md:px-8 lg:px-16 ${className}`}
+      className={`min-h-screen w-full self-stretch px-3 py-8 sm:px-4 sm:py-10 md:px-6 lg:px-8 xl:px-16 ${className}`}
     >
       {title && <SectionHeader title={title} />}
       {children}

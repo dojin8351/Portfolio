@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { generateBlurDataURL } from "@/lib/imageUtils"
 
 interface ProfileAvatarProps {
   src: string
@@ -16,8 +17,13 @@ export default function ProfileAvatar({ src }: ProfileAvatarProps) {
         alt="Profile"
         fill
         className="object-cover"
-        sizes="(max-width: 640px) 128px, 160px"
+        sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 160px"
         priority
+        quality={75}
+        fetchPriority="high"
+        loading="eager"
+        placeholder="blur"
+        blurDataURL={generateBlurDataURL(160, 160)}
       />
     </div>
   )

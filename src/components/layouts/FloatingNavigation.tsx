@@ -23,38 +23,38 @@ export default function FloatingNavigation() {
   }
 
   return (
-    <div className="fixed bottom-10 left-1/2 z-50 flex h-12 -translate-x-1/2 items-center rounded-full border border-gray-200/50 bg-white/70 px-6 whitespace-nowrap shadow-lg backdrop-blur-2xl sm:h-12 sm:px-10 dark:border-gray-700/50 dark:bg-gray-900/60">
-      <div className="flex flex-row items-center gap-4 font-medium sm:gap-6 dark:text-white">
+    <div className="fixed bottom-4 left-1/2 z-50 flex h-auto min-h-12 -translate-x-1/2 items-center rounded-full border border-gray-200/50 bg-white/70 px-4 py-1.5 shadow-lg backdrop-blur-2xl sm:bottom-10 sm:h-12 sm:px-6 sm:py-0 dark:border-gray-700/50 dark:bg-gray-900/60">
+      <div className="flex flex-row items-center gap-2.5 font-medium whitespace-nowrap sm:gap-5 dark:text-white">
         <p
-          className={`cursor-pointer text-sm transition-all duration-300 hover:text-blue-500 sm:text-base ${getActiveClass("about-me")}`}
+          className={`cursor-pointer text-xs transition-all duration-300 hover:text-blue-500 sm:text-sm md:text-base ${getActiveClass("about-me")}`}
           style={getActiveStyle("about-me")}
           onClick={() => scrollToSection(null)}
         >
           자기소개
         </p>
         <p
-          className={`cursor-pointer text-sm transition-all duration-300 hover:text-blue-500 sm:text-base ${getActiveClass("competency")}`}
+          className={`cursor-pointer text-xs transition-all duration-300 hover:text-blue-500 sm:text-sm md:text-base ${getActiveClass("competency")}`}
           style={getActiveStyle("competency")}
           onClick={() => scrollToSection("competency")}
         >
           역량
         </p>
         <p
-          className={`cursor-pointer text-sm transition-all duration-300 hover:text-blue-500 sm:text-base ${getActiveClass("skills")}`}
+          className={`cursor-pointer text-xs transition-all duration-300 hover:text-blue-500 sm:text-sm md:text-base ${getActiveClass("skills")}`}
           style={getActiveStyle("skills")}
           onClick={() => scrollToSection("skills")}
         >
           기술
         </p>
         <p
-          className={`cursor-pointer text-sm transition-all duration-300 hover:text-blue-500 sm:text-base ${getActiveClass("projects")}`}
+          className={`cursor-pointer text-xs transition-all duration-300 hover:text-blue-500 sm:text-sm md:text-base ${getActiveClass("projects")}`}
           style={getActiveStyle("projects")}
           onClick={() => scrollToSection("projects")}
         >
           프로젝트
         </p>
 
-        <div className="ml-2 flex items-center">
+        <div className="ml-1 flex items-center sm:ml-2">
           <ThemeToggleButton />
         </div>
       </div>

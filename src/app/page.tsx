@@ -1,14 +1,22 @@
 import AboutMeSection from "@/components/layouts/AboutMeSection"
 import aboutMeData from "@/data/aboutMe.json"
-import CompetencySection from "@/components/layouts/CompetencySection"
-import SkillSection from "@/components/layouts/SkillSection"
-import { Toaster } from "@/components/ui/sonner"
-import ProjectSection from "@/components/layouts/ProjectSection"
 import dynamic from "next/dynamic"
 import { AboutMeType } from "@/types/aboutMe"
 
+const CompetencySection = dynamic(
+  () => import("@/components/layouts/CompetencySection")
+)
+const SkillSection = dynamic(
+  () => import("@/components/layouts/SkillSection")
+)
+const ProjectSection = dynamic(
+  () => import("@/components/layouts/ProjectSection")
+)
 const FloatingNavigation = dynamic(
   () => import("@/components/layouts/FloatingNavigation")
+)
+const Toaster = dynamic(
+  () => import("@/components/ui/sonner").then((mod) => ({ default: mod.Toaster }))
 )
 
 const aboutMeInfo: AboutMeType = {

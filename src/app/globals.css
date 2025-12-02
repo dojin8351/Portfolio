@@ -4,9 +4,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-    --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+    --font-sans: "Pretendard", "Pretendard Variable", "Pretendard JP", "Pretendard Std", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --radius: 0.625rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -175,10 +173,15 @@ h4 {
   * {
     @apply border-border outline-ring/50;
     }
+  html,
+  body {
+    font-family: "Pretendard", "Pretendard Variable", "Pretendard JP", "Pretendard Std", -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
+    }
   body {
     @apply bg-background text-foreground;
     }
 }
+
 
 .custom-scrollbar {
   scrollbar-width: thin;

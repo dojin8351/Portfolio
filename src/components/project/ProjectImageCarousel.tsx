@@ -27,21 +27,23 @@ export default function ProjectImageCarousel({
   images,
 }: ProjectImageCarouselProps) {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Carousel>
-        <CarouselContent className="-ml-2 sm:-ml-4">
+        <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
           {images.map((img, index) => (
             <CarouselItem
               key={img.src}
-              className="basis-full pl-2 sm:basis-1/2 sm:pl-4 md:basis-1/3"
+              className="basis-full pl-1 sm:basis-1/2 sm:pl-2 md:basis-1/3 md:pl-4"
             >
-              <ImageDialog image={img} images={images} initialIndex={index} />
+              <div className="w-full">
+                <ImageDialog image={img} images={images} initialIndex={index} />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-2 cursor-pointer border border-gray-300 bg-white/70 text-gray-800 shadow-md backdrop-blur-lg hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-700" />
+        <CarouselPrevious className="left-1 cursor-pointer border border-gray-300 bg-white/70 text-gray-800 shadow-md backdrop-blur-lg hover:bg-gray-100 sm:left-2 dark:border-gray-600 dark:bg-gray-800/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-700" />
 
-        <CarouselNext className="right-2 cursor-pointer border border-gray-300 bg-white/70 text-gray-800 shadow-md backdrop-blur-lg hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-700" />
+        <CarouselNext className="right-1 cursor-pointer border border-gray-300 bg-white/70 text-gray-800 shadow-md backdrop-blur-lg hover:bg-gray-100 sm:right-2 dark:border-gray-600 dark:bg-gray-800/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-700" />
       </Carousel>
     </div>
   )
@@ -66,7 +68,7 @@ function ImageDialog({ image, images, initialIndex }: ImageDialogProps) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <div className="group relative cursor-pointer overflow-hidden rounded-md transition-transform hover:scale-105">
+        <div className="group relative w-full cursor-pointer overflow-hidden rounded-md transition-transform hover:scale-105">
           <Image
             src={image.src}
             alt={image.alt}
@@ -99,9 +101,9 @@ function ImageDialog({ image, images, initialIndex }: ImageDialogProps) {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="flex h-[85vh]! w-[80vw]! max-w-[80vw]! grid-rows-none! flex-col gap-0 border-none bg-white p-10 dark:bg-gray-800">
+      <DialogContent className="flex h-[85vh]! w-[95vw]! max-w-[95vw]! grid-rows-none! flex-col gap-0 border-none bg-white p-2 overflow-x-hidden sm:w-[80vw]! sm:max-w-[80vw]! sm:p-4 md:p-10 dark:bg-gray-800">
         <DialogTitle className="sr-only">이미지 확대 보기</DialogTitle>
-        <div className="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden">
+        <div className="relative flex min-h-0 flex-1 items-center justify-center w-full overflow-hidden">
           <Carousel
             setApi={setApi}
             className="flex h-full w-full items-center justify-center"
@@ -112,14 +114,14 @@ function ImageDialog({ image, images, initialIndex }: ImageDialogProps) {
                   key={dialogImg.src}
                   className="flex h-full basis-full items-center justify-center"
                 >
-                  <div className="flex h-full w-full items-center justify-center">
+                  <div className="flex h-full w-full items-center justify-center px-1">
                     <Image
                       src={dialogImg.src}
                       alt={dialogImg.alt}
                       width={1920}
                       height={1080}
-                      className="max-h-full max-w-full rounded-md border border-gray-200 object-contain dark:border-gray-700"
-                      sizes="(100vw - 5rem)"
+                      className="h-auto max-h-full w-auto max-w-full rounded-md border border-gray-200 object-contain dark:border-gray-700"
+                      sizes="(100vw - 2rem)"
                       priority={dialogIndex === initialIndex}
                       placeholder="blur"
                       blurDataURL={generateBlurDataURL(1920, 1080)}
@@ -129,8 +131,8 @@ function ImageDialog({ image, images, initialIndex }: ImageDialogProps) {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 border-2 border-gray-300 bg-white/80 text-gray-800 backdrop-blur-lg hover:border-gray-400 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-600" />
-            <CarouselNext className="right-4 border-2 border-gray-300 bg-white/80 text-gray-800 backdrop-blur-lg hover:border-gray-400 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-600" />
+            <CarouselPrevious className="left-1 border-2 border-gray-300 bg-white/80 text-gray-800 backdrop-blur-lg hover:border-gray-400 hover:bg-gray-100 sm:left-2 md:left-4 dark:border-gray-600 dark:bg-gray-700/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-600" />
+            <CarouselNext className="right-1 border-2 border-gray-300 bg-white/80 text-gray-800 backdrop-blur-lg hover:border-gray-400 hover:bg-gray-100 sm:right-2 md:right-4 dark:border-gray-600 dark:bg-gray-700/80 dark:text-gray-200 dark:shadow-lg dark:hover:bg-gray-600" />
           </Carousel>
         </div>
       </DialogContent>
