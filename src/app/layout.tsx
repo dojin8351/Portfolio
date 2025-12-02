@@ -11,8 +11,11 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "프론트엔드 포트폴리오",
+    default: "김도현의 포트폴리오",
     template: "%s | 프론트엔드 포트폴리오",
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
   description: `${aboutMeData.name} - ${aboutMeData.job} 개발자 포트폴리오. React.js와 Next.js를 활용한 모던 웹 애플리케이션 개발 경험이 있습니다.`,
   keywords: [
