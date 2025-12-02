@@ -218,7 +218,7 @@ npm start
       "period": "2024.01 ~ 2024.03",            // 프로젝트 기간
       "projectImage": [                          // 프로젝트 스크린샷 이미지들
         {
-          "src": "/images/project1/image1.png",   // 이미지 경로
+          "src": "/images/SVL/image1.png",   // 이미지 경로
           "alt": "프로젝트 스크린샷 1"            // 이미지 대체 텍스트
         }
       ],
@@ -279,11 +279,11 @@ npm start
       "period": "2024.01 ~ 2024.04",
       "projectImage": [
         {
-          "src": "/images/project1/home.png",
+          "src": "/images/SVL/home.png",
           "alt": "홈 화면"
         },
         {
-          "src": "/images/project1/product.png",
+          "src": "/images/SVL/product.png",
           "alt": "상품 상세 화면"
         }
       ],
@@ -332,7 +332,7 @@ npm start
    {
      "projectImage": [
        {
-         "src": "/images/project1/screenshot1.png",
+         "src": "/images/SVL/screenshot1.png",
          "alt": "스크린샷 1"
        }
      ]

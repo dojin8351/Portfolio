@@ -1,4 +1,3 @@
-import Header from "@/components/layouts/Header"
 import AboutMeSection from "@/components/layouts/AboutMeSection"
 import aboutMeData from "@/data/aboutMe.json"
 import CompetencySection from "@/components/layouts/CompetencySection"
@@ -6,20 +5,20 @@ import SkillSection from "@/components/layouts/SkillSection"
 import { Toaster } from "@/components/ui/sonner"
 import ProjectSection from "@/components/layouts/ProjectSection"
 import dynamic from "next/dynamic"
-import SkillTabs from "@/components/skill/SkillTabs"
+import { AboutMeType } from "@/types/aboutMe"
 
 const FloatingNavigation = dynamic(
   () => import("@/components/layouts/FloatingNavigation")
 )
 
-const aboutMeInfo = {
+const aboutMeInfo: AboutMeType = {
   name: aboutMeData.name,
-  src: aboutMeData.profileImg,
+  profileImg: aboutMeData.profileImg,
   job: aboutMeData.job,
   email: aboutMeData.email,
   githubLink: aboutMeData.githubLink,
   introductions: aboutMeData.introductions,
-  achievements: aboutMeData.achievements,
+  achievements: aboutMeData.achievements as AboutMeType["achievements"],
 }
 
 export default function Home() {
