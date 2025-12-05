@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://portfolio-dohyeon.vercel.app/sitemap.xml", // 실제 배포 URL로 변경 필요
+    sitemap: "https://dohyeon-portfolio.com/sitemap.xml",
   }
 }

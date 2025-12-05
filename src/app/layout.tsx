@@ -33,13 +33,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://portfolio-dohyeon.vercel.app", // 실제 배포 URL로 변경 필요
+    url: "https://dohyeon-portfolio.com",
     title: "프론트엔드 포트폴리오",
     description: `${aboutMeData.name} - ${aboutMeData.job} 개발자 포트폴리오`,
     siteName: "프론트엔드 포트폴리오",
     images: [
       {
-        url: "/bijeuniseu-salam-eul-gajanghaneun-gwiyeoun-gang-aji.jpg", // OG 이미지로 사용할 이미지
+        url: "/bijeuniseu-salam-eul-gajanghaneun-gwiyeoun-gang-aji.jpg",
         width: 1200,
         height: 630,
         alt: `${aboutMeData.name} 포트폴리오`,
@@ -63,9 +63,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  metadataBase: new URL("https://portfolio-dohyeon.vercel.app"), // 실제 배포 URL로 변경 필요
+
+  // ⭐ 반드시 실제 배포 주소로 변경해야 하는 곳
+  metadataBase: new URL("https://dohyeon-portfolio.com"),
+
   alternates: {
-    canonical: "/",
+    canonical: "https://dohyeon-portfolio.com",
   },
 }
 
@@ -80,7 +83,7 @@ export default function RootLayout({
     name: aboutMeData.name,
     jobTitle: `${aboutMeData.job} 개발자`,
     email: aboutMeData.email,
-    url: aboutMeData.githubLink,
+    url: "https://dohyeon-portfolio.com",
     sameAs: [aboutMeData.githubLink],
     description: `${aboutMeData.job} 개발자 포트폴리오`,
   }
