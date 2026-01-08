@@ -68,10 +68,10 @@ export default function ProjectDetailView({
               </button>
 
         <div className="w-full h-[60vh] md:h-[80vh] relative overflow-hidden">
-          {project.projectImage[0] && (
+          {(project.representativeImg || project.projectImage[0]) && (
             <Image
-              src={project.projectImage[0].src}
-              alt={project.projectImage[0].alt || project.title}
+              src={project.representativeImg?.src || project.projectImage[0].src}
+              alt={project.representativeImg?.alt || project.projectImage[0].alt || project.title}
               fill
               className="object-cover opacity-60"
             />

@@ -59,10 +59,10 @@ export default function ProjectCard({
       </span>
       <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-200 dark:bg-gray-900">
         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
-        {project.projectImage[0] && (
+        {(project.representativeImg || project.projectImage[0]) && (
           <Image
-            src={project.projectImage[0].src}
-            alt={project.projectImage[0].alt || project.title}
+            src={project.representativeImg?.src || project.projectImage[0].src}
+            alt={project.representativeImg?.alt || project.projectImage[0].alt || project.title}
             fill
             className="object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-110 transition-all duration-[1.5s] aristide-ease"
           />

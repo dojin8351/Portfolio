@@ -7,6 +7,10 @@
       "team": "6명 (BE 3, AI 1, FE 1, INF 1)",
       "role": "Frontend / 팀장",
       "period": "2025.10 ~ 2025.11",
+      "representativeImg": {
+        "src": "/RepresentativeImg/ZipOn.png",
+        "alt": "ZipOn 대표 이미지"
+      },
       "projectImage": [
         {
           "src": "/images/ZipOn/ZipOn1.png",
@@ -99,6 +103,10 @@
       "team": "6명 (BE 4, FE 2)",
       "role": "Frontend / 팀장",
       "period": "2025.08 ~ 2025.10",
+      "representativeImg": {
+        "src": "/RepresentativeImg/FoBank.png",
+        "alt": "FoBank 대표 이미지"
+      },
       "projectImage": [
         {
           "src": "/images/FoBank/FoBankAsset.png",
@@ -182,6 +190,10 @@
       "team": "6명 (BE 2, AI 1, FE 2, INF 1)",
       "role": "Frontend",
       "period": "2025.07 ~ 2025.08",
+      "representativeImg": {
+        "src": "/RepresentativeImg/SVL.png",
+        "alt": "SVL 대표 이미지"
+      },
       "projectImage": [
         {
           "src": "/images/SVL/SVLHome.png",
@@ -254,6 +266,10 @@
       "team": "1명",
       "role": "Frontend",
       "period": "",
+      "representativeImg": {
+        "src": "/RepresentativeImg/Portfolio.png",
+        "alt": "Portfolio 대표 이미지"
+      },
       "projectImage": [
         {
           "src": "/images/Portfolio/PortfolioAboutMe.png",

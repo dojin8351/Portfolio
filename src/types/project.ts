@@ -7,6 +7,7 @@ export interface Project {
   team: string
   role: string
   period: string
+  representativeImg?: ImgType
   projectImage: ImgType[]
   projectDescription: ProjectDescription[]
   techLogos: ImgType[]
