@@ -11,6 +11,7 @@ export interface Project {
   projectDescription: ProjectDescription[]
   techLogos: ImgType[]
   githubLink: string
+  liveDemoLink?: string
 }
 
 export interface ProjectData {

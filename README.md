@@ -45,6 +45,28 @@ npm run build
 npm start
 ```
 
+## ✨ 주요 개선 사항 (최신 업데이트)
+
+### 1. **Hero Section 강화**
+- **기술적 USP 강조**: `aboutMe.json`의 `techUSP` 필드를 통해 프론트엔드 개발자로서의 핵심 역량을 한 문장으로 표현
+- **블로그 링크**: 기술 블로그가 있다면 `blogLink` 필드를 추가하여 학습 기록과 지식 공유 태도를 어필
+
+### 2. **접근성 (Accessibility) 개선**
+- 모든 인터랙티브 요소에 `aria-label` 추가
+- 키보드 네비게이션 지원 (`Enter`, `Space` 키)
+- 포커스 스타일링 (`focus:ring`, `focus:outline`) 추가
+- 시맨틱 HTML 태그 사용 (`<nav>`, `<header>` 등)
+
+### 3. **프로젝트 라이브 데모 링크**
+- 프로젝트 카드에 배포된 링크를 추가할 수 있는 기능
+- `project.json`의 각 프로젝트에 `liveDemoLink` 필드 추가 가능
+- 프로젝트 상세 페이지에도 라이브 데모 버튼 표시
+
+### 4. **스크롤 애니메이션**
+- Intersection Observer API를 활용한 스크롤 기반 fade-in 애니메이션
+- `ScrollReveal` 컴포넌트로 프로젝트 설명, 갤러리 등에 적용
+- 방향(up/down/left/right)과 딜레이 조절 가능
+
 ## 🎨 디자인 철학 및 애니메이션
 
 ### 디자인 컨셉: Aristide Benoist 스타일
@@ -132,7 +154,9 @@ export interface AboutMeType {
   profileImg: string        // 프로필 이미지 경로
   job: string               // 직무
   githubLink: string        // GitHub 링크
+  blogLink?: string         // 블로그 링크 (선택)
   email: string             // 이메일
+  techUSP?: string          // 기술적 USP (선택)
   introductions: string[]   // 자기소개 문구 배열
   achievements: Achievement[] // 성과/교육 이력
 }
@@ -357,6 +381,7 @@ export interface Project {
   projectDescription: ProjectDescription[] // 상세 설명 배열
   techLogos: ImgType[]          // 기술 스택 로고 배열
   githubLink: string            // GitHub 링크
+  liveDemoLink?: string         // 라이브 데모 링크 (선택)
 }
 
 export interface ProjectDescription {

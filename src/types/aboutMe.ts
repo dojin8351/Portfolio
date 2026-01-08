@@ -11,7 +11,9 @@ export interface AboutMeType {
   profileImg: string
   job: string
   githubLink: string
+  blogLink?: string
   email: string
+  techUSP?: string
   introductions: string[]
   achievements: Achievement[]
 }

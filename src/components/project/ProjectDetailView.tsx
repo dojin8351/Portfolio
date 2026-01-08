@@ -51,14 +51,21 @@ export default function ProjectDetailView({
       `}
     >
       <div className="min-h-screen relative pb-32">
-        <button
-          onClick={onBackToList}
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
-          className="fixed top-8 right-8 md:top-12 md:right-12 z-50 p-3 rounded-full border border-gray-400 dark:border-gray-700 bg-white/50 dark:bg-black/50 backdrop-blur-md hover:border-gray-900 dark:hover:border-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-300 cursor-none"
-        >
-          <X className="w-6 h-6" />
-        </button>
+              <button
+                onClick={onBackToList}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    onBackToList()
+                  }
+                }}
+                aria-label="프로젝트 목록으로 돌아가기"
+                className="fixed top-8 right-8 md:top-12 md:right-12 z-50 p-3 rounded-full border border-gray-400 dark:border-gray-700 bg-white/50 dark:bg-black/50 backdrop-blur-md hover:border-gray-900 dark:hover:border-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-300 cursor-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+              >
+                <X className="w-6 h-6" />
+              </button>
 
         <div className="w-full h-[60vh] md:h-[80vh] relative overflow-hidden">
           {project.projectImage[0] && (
@@ -118,19 +125,34 @@ export default function ProjectDetailView({
               {project.description}
             </h2>
             <ProjectTechStack techLogos={project.techLogos} />
-            <div className="mt-12">
+            <div className="mt-12 flex flex-col md:flex-row gap-6">
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
-                className="inline-flex items-center gap-3 text-xl border-b border-gray-400 dark:border-gray-700 pb-1 hover:border-gray-900 dark:hover:border-white transition-all cursor-none"
+                aria-label={`${displayTitle} GitHub 저장소 보기 (새 창 열림)`}
+                className="inline-flex items-center gap-3 text-xl border-b border-gray-400 dark:border-gray-700 pb-1 hover:border-gray-900 dark:hover:border-white transition-all cursor-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-sm"
               >
                 <Github className="w-5 h-5" />
                 <span className="text-gray-800 dark:text-[#f0f0f0]">View on GitHub</span>
                 <ExternalLink className="w-4 h-4 text-gray-600 dark:text-gray-500" />
               </a>
+              {project.liveDemoLink && (
+                <a
+                  href={project.liveDemoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setIsHovering(true)}
+                  onMouseLeave={() => setIsHovering(false)}
+                  aria-label={`${displayTitle} 라이브 데모 보기 (새 창 열림)`}
+                  className="inline-flex items-center gap-3 text-xl border-b border-gray-400 dark:border-gray-700 pb-1 hover:border-gray-900 dark:hover:border-white transition-all cursor-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-sm"
+                >
+                  <ExternalLink className="w-5 h-5 text-gray-800 dark:text-[#f0f0f0]" />
+                  <span className="text-gray-800 dark:text-[#f0f0f0]">Live Demo</span>
+                </a>
+              )}
             </div>
           </div>
 

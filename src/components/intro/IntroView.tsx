@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Code } from 'lucide-react'
+import { ArrowRight, Code, BookOpen } from 'lucide-react'
 import { AboutMeType } from '@/types/aboutMe'
 import ProfileImageCard from './ProfileImageCard'
 import AchievementsList from './AchievementsList'
@@ -42,11 +42,21 @@ export default function IntroView({
 
           <div className="h-px w-24 bg-gray-300 dark:bg-gray-700 my-4"></div>
 
+          {/* 기술적 USP 강조 */}
+          {aboutMeData.techUSP && (
+            <div className="mb-6 animate-fade-in-up delay-100">
+              <p className="text-lg md:text-xl font-medium text-gray-900 dark:text-[#f0f0f0] leading-relaxed italic">
+                {aboutMeData.techUSP}
+              </p>
+            </div>
+          )}
+
           <div className="space-y-4 max-w-lg">
             {aboutMeData.introductions.map((text, idx) => (
               <p
                 key={idx}
-                className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed"
+                className="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed animate-fade-in-up"
+                style={{ animationDelay: `${(idx + 2) * 0.1}s` }}
               >
                 {text}
               </p>
@@ -58,7 +68,14 @@ export default function IntroView({
               onClick={onEnterProjects}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="group flex items-center gap-4 text-lg md:text-xl tracking-widest uppercase cursor-none w-max"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  onEnterProjects()
+                }
+              }}
+              aria-label="프로젝트 보기"
+              className="group flex items-center gap-4 text-lg md:text-xl tracking-widest uppercase cursor-none w-max focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-sm"
             >
               <span className="border-b border-transparent group-hover:border-gray-900 dark:group-hover:border-white transition-all duration-500">
                 See Projects
@@ -70,13 +87,38 @@ export default function IntroView({
               onClick={onEnterSkills}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="group flex items-center gap-4 text-lg md:text-xl tracking-widest uppercase cursor-none text-gray-600 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors duration-500 w-max"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  onEnterSkills()
+                }
+              }}
+              aria-label="스킬 보기"
+              className="group flex items-center gap-4 text-lg md:text-xl tracking-widest uppercase cursor-none text-gray-600 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors duration-500 w-max focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-sm"
             >
               <span className="border-b border-transparent group-hover:border-gray-900 dark:group-hover:border-white transition-all duration-500">
                 See Skills
               </span>
               <Code className="w-5 h-5 group-hover:rotate-12 transition-transform duration-500" />
             </button>
+
+            {/* 블로그 링크 */}
+            {aboutMeData.blogLink && (
+              <a
+                href={aboutMeData.blogLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                aria-label="블로그 방문 (새 창 열림)"
+                className="group flex items-center gap-4 text-lg md:text-xl tracking-widest uppercase cursor-none text-gray-600 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors duration-500 w-max focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-sm"
+              >
+                <span className="border-b border-transparent group-hover:border-gray-900 dark:group-hover:border-white transition-all duration-500">
+                  Blog
+                </span>
+                <BookOpen className="w-5 h-5 group-hover:rotate-12 transition-transform duration-500" />
+              </a>
+            )}
           </div>
         </div>
 

@@ -29,6 +29,8 @@ export default function Home() {
     job: aboutMeData.job,
     email: aboutMeData.email,
     githubLink: aboutMeData.githubLink,
+    blogLink: 'blogLink' in aboutMeData ? (aboutMeData as AboutMeType & { blogLink?: string }).blogLink : undefined,
+    techUSP: 'techUSP' in aboutMeData ? (aboutMeData as AboutMeType & { techUSP?: string }).techUSP : undefined,
     introductions: aboutMeData.introductions,
     achievements: aboutMeData.achievements as AboutMeType['achievements'],
   }
