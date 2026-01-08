@@ -13,7 +13,7 @@ export default function ProfileImageCard({
 }: ProfileImageCardProps) {
   return (
     <div
-      className="relative w-full max-w-sm aspect-[4/5] bg-gray-200 dark:bg-gray-900 overflow-hidden mb-8 md:mb-12 group"
+      className="relative w-full max-w-sm aspect-[4/5] bg-gray-200 dark:bg-gray-900 overflow-hidden mb-0 md:mb-12 group"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >

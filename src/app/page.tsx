@@ -14,6 +14,7 @@ import IntroView from '@/components/intro/IntroView'
 import ProjectListView from '@/components/project/ProjectListView'
 import ProjectDetailView from '@/components/project/ProjectDetailView'
 import SkillsView from '@/components/skills/SkillsView'
+import { useIsMobile } from '@/hooks/useIsMobile'
 
 type ViewType = 'intro' | 'list' | 'detail' | 'skills'
 
@@ -22,6 +23,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isHovering, setIsHovering] = useState(false)
   const [isDraggableArea, setIsDraggableArea] = useState(false)
+  const isMobile = useIsMobile()
 
   const aboutMeInfo: AboutMeType = {
     name: aboutMeData.name,
@@ -61,7 +63,7 @@ export default function Home() {
   }
 
   return (
-    <div className={`relative w-full h-screen bg-[#FAFAF9] dark:bg-[#111] text-gray-900 dark:text-[#f0f0f0] overflow-hidden font-sans selection:bg-blue-200 dark:selection:bg-white selection:text-black dark:selection:text-black transition-colors duration-500 ${isDraggableArea ? 'cursor-grab' : 'cursor-none'}`}>
+    <div className={`relative w-full h-screen bg-[#FAFAF9] dark:bg-[#111] text-gray-900 dark:text-[#f0f0f0] overflow-hidden font-sans selection:bg-blue-200 dark:selection:bg-white selection:text-black dark:selection:text-black transition-colors duration-500 ${!isMobile && (isDraggableArea ? 'cursor-grab' : 'cursor-none')}`}>
       <CustomCursor isHovering={isHovering} hideCursor={isDraggableArea} />
       <AristideThemeToggle />
 

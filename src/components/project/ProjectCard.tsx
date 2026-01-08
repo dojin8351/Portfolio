@@ -52,9 +52,9 @@ export default function ProjectCard({
       role="button"
       tabIndex={0}
       aria-label={`${displayTitle} 프로젝트 자세히 보기`}
-      className="group relative flex-shrink-0 w-[80vw] md:w-[45vw] lg:w-[35vw] max-w-[600px] max-h-[800px] snap-center flex flex-col gap-6 cursor-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-sm"
+      className="group relative flex-shrink-0 w-[85vw] md:w-[45vw] lg:w-[35vw] max-w-[600px] max-h-[800px] snap-center flex flex-col gap-4 md:gap-6 md:cursor-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-sm touch-manipulation"
     >
-      <span className="text-6xl font-serif text-gray-300/40 dark:text-white/40 group-hover:text-gray-900/100 dark:group-hover:text-white/100 transition-all duration-500">
+      <span className="text-4xl md:text-6xl font-serif text-gray-300/40 dark:text-white/40 group-hover:text-gray-900/100 dark:group-hover:text-white/100 transition-all duration-500">
         0{index + 1}
       </span>
       <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-200 dark:bg-gray-900">
@@ -78,7 +78,7 @@ export default function ProjectCard({
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
             aria-label={`${displayTitle} 라이브 데모 보기 (새 창 열림)`}
-            className="absolute top-4 right-4 z-20 p-3 rounded-full bg-black/70 dark:bg-white/20 backdrop-blur-md hover:bg-black/90 dark:hover:bg-white/30 transition-all duration-300 group/link cursor-none focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50"
+            className="absolute top-3 right-3 md:top-4 md:right-4 z-20 p-2.5 md:p-3 rounded-full bg-black/70 dark:bg-white/20 backdrop-blur-md hover:bg-black/90 dark:hover:bg-white/30 active:bg-black/90 dark:active:bg-white/30 transition-all duration-300 group/link md:cursor-none focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             <ExternalLink className="w-5 h-5 text-white group-hover/link:scale-110 transition-transform duration-300" />
           </a>
@@ -86,20 +86,20 @@ export default function ProjectCard({
       </div>
       <div className="flex justify-between items-end border-b border-gray-300 dark:border-gray-800 pb-4 group-hover:border-gray-600 dark:group-hover:border-gray-500 transition-colors duration-500">
         <div>
-          <h3 className="text-3xl font-light mb-1 text-gray-900 dark:text-[#f0f0f0]">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-light mb-1 text-gray-900 dark:text-[#f0f0f0]">
             {displayTitle}
             {subtitle && (
-              <span className="block text-lg text-gray-600 dark:text-gray-400 font-normal">
+              <span className="block text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-400 font-normal">
                 {subtitle}
               </span>
             )}
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-500 uppercase tracking-widest mt-2">
+          <p className="text-xs md:text-sm text-gray-600 dark:text-gray-500 uppercase tracking-widest mt-2">
             {category}
           </p>
         </div>
         {startDate && (
-          <span className="text-sm text-gray-600 dark:text-gray-500">{startDate}</span>
+          <span className="text-xs md:text-sm text-gray-600 dark:text-gray-500">{startDate}</span>
         )}
       </div>
     </div>

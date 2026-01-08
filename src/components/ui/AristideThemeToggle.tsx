@@ -17,7 +17,7 @@ export default function AristideThemeToggle() {
       onClick={toggleTheme}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      className="fixed bottom-8 right-8 md:bottom-12 md:right-12 z-50 p-4 rounded-full border border-gray-700 dark:border-gray-300 bg-black/50 dark:bg-white/10 backdrop-blur-md hover:border-white dark:hover:border-white hover:bg-white/10 dark:hover:bg-white/20 transition-all duration-300 cursor-none group"
+      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 z-50 p-3 md:p-4 rounded-full border border-gray-700 dark:border-gray-300 bg-black/50 dark:bg-white/10 backdrop-blur-md hover:border-white dark:hover:border-white hover:bg-white/10 dark:hover:bg-white/20 active:border-white dark:active:border-white active:bg-white/10 dark:active:bg-white/20 transition-all duration-300 md:cursor-none group min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation"
       aria-label="Toggle theme"
     >
       <div className="relative w-6 h-6 flex items-center justify-center">

@@ -10,8 +10,8 @@ export default function AchievementsList({
   achievements,
 }: AchievementsListProps) {
   return (
-    <div className="w-full max-w-sm space-y-6">
-      <h3 className="text-xs text-gray-600 dark:text-gray-500 uppercase tracking-widest border-b border-gray-300 dark:border-gray-800 pb-2">
+    <div className="w-full space-y-6 md:max-w-sm">
+      <h3 className="text-xs text-gray-600 dark:text-gray-500 uppercase tracking-widest border-b border-gray-300 dark:border-gray-800 pb-2 md:text-left">
         Achievements & Education
       </h3>
       <div className="space-y-4">

@@ -36,11 +36,11 @@ export default function SkillItem({ skill, setIsHovering }: SkillItemProps) {
               </span>
             )}
           </div>
-          <span className="text-xl md:text-2xl font-light text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
+          <span className="text-lg md:text-xl lg:text-2xl font-light text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white active:text-gray-900 dark:active:text-white transition-colors duration-300">
             {skill.alt}
           </span>
         </div>
-        <span className="text-sm font-mono text-gray-600 dark:text-gray-600 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+        <span className="text-xs md:text-sm font-mono text-gray-600 dark:text-gray-600 group-hover:text-gray-900 dark:group-hover:text-white active:text-gray-900 dark:active:text-white transition-colors">
           {skill.proficiency}%
         </span>
       </div>

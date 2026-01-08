@@ -309,3 +309,20 @@ h4 {
   animation-delay: 0.7s;
   opacity: 0;
 }
+
+/* 모바일 터치 최적화 */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 모바일에서 호버 효과 비활성화 */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:grayscale-0:hover {
+    filter: grayscale(0);
+  }
+  
+  .group:hover .group-hover\:grayscale-0 {
+    filter: grayscale(0);
+  }
+}
