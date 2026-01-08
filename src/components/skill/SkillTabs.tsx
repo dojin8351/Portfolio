@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ImgType } from "@/types/common"
 import SkillsCard from "@/components/skill/SkillsCard"
 import { cn } from "@/lib/utils"
 import { useDarkMode } from "@/hooks/useDarkMode"

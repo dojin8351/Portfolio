@@ -2,6 +2,8 @@
 
 Next.js 16과 TypeScript를 기반으로 한 모던한 포트폴리오 웹사이트 템플릿입니다. JSON 파일만 수정하면 코드 수정 없이 내용을 업데이트할 수 있습니다.
 
+이 포트폴리오는 [Aristide Benoist](https://aristidebenoist.com/)의 디자인 철학을 기반으로 제작되었으며, 극단적인 여백, 부드러운 애니메이션, 커스텀 커서 등 미니멀하면서도 세련된 사용자 경험을 제공합니다.
+
 ## ✨ 주요 기능
 
 - 📱 **완전 반응형 디자인** - 모바일, 태블릿, 데스크톱 모든 디바이스 지원
@@ -43,13 +45,106 @@ npm run build
 npm start
 ```
 
+## 🎨 디자인 철학 및 애니메이션
+
+### 디자인 컨셉: Aristide Benoist 스타일
+
+이 포트폴리오는 프랑스 디자이너 Aristide Benoist의 웹사이트에서 영감을 받아 제작되었습니다. 다음과 같은 디자인 원칙을 따릅니다:
+
+#### 1. **극단적인 여백 (Negative Space)**
+- 화면의 대부분을 여백으로 채워 콘텐츠에 집중할 수 있도록 설계
+- 각 섹션 간 충분한 간격으로 시각적 피로 감소
+- 최대 너비 제한(`max-w-7xl`)으로 큰 화면에서도 읽기 편한 레이아웃 유지
+
+#### 2. **부드러운 전환 애니메이션**
+- **전환 시간**: 2.2초의 긴 전환 시간으로 자연스러운 움직임
+- **Easing 함수**: `cubic-bezier(0.25, 0.46, 0.45, 0.94)` - 느린 시작과 끝으로 부드러운 곡선
+- **Transform 거리**: 최소한의 이동(`translate-y-4`, `translate-x-4`)으로 끊김 없는 전환
+- **Opacity 전환**: 이전 화면은 0.4초에 빠르게 사라지고, 새 화면은 2.2초에 부드럽게 나타남
+
+```css
+.view-transition {
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),  /* 빠른 사라짐 */
+              transform 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 부드러운 등장 */
+}
+```
+
+#### 3. **커스텀 커서**
+- 기본 커서를 숨기고 원형 커서로 대체
+- 호버 시 커서가 확대되며 "VIEW" 텍스트 표시
+- 드래그 가능한 영역에서는 기본 브라우저 커서(grab/grabbing) 사용
+- `mix-blend-difference`로 배경과 대비되는 시각적 효과
+
+#### 4. **마이크로 인터랙션**
+- 모든 버튼과 링크에 호버 효과 적용
+- 이미지 호버 시 그레이스케일 해제 및 확대 효과
+- 프로젝트 카드 호버 시 테두리 색상 변화
+- 부드러운 전환을 위한 `aristide-ease` 커스텀 easing 함수
+
+#### 5. **타이포그래피**
+- 큰 타이포그래피로 강한 시각적 임팩트
+- 얇은 폰트 웨이트(`font-light`)로 세련된 느낌
+- 넓은 자간(`tracking-tight`, `tracking-widest`)으로 가독성 향상
+
+#### 6. **색상 팔레트**
+- 다크 배경(`#111`)으로 콘텐츠에 집중
+- 회색 톤의 텍스트로 계층 구조 표현
+- 최소한의 색상 사용으로 미니멀한 느낌
+
+### 애니메이션 구현 세부사항
+
+#### 뷰 전환 시스템
+```typescript
+// 각 뷰는 isVisible prop으로 표시/숨김 제어
+<div className={`
+  view-transition
+  ${isVisible ? 'visible opacity-100 translate-y-0' : 'invisible opacity-0 translate-y-4'}
+`}>
+```
+
+#### 드래그 기능 (Projects 페이지)
+- `requestAnimationFrame`을 사용한 부드러운 스크롤
+- 마우스 드래그로 프로젝트 카드 넘기기
+- 스냅 포인트로 정확한 위치 정렬
+
+#### 성능 최적화
+- `will-change: opacity, transform`으로 GPU 가속 활용
+- `backface-visibility: hidden`으로 렌더링 최적화
+- `pointer-events` 제어로 불필요한 이벤트 방지
+
+---
+
 ## 📝 데이터 수정 가이드
 
-모든 내용은 `src/data/` 폴더의 JSON 파일을 수정하여 변경할 수 있습니다.
+모든 내용은 `src/data/` 폴더의 JSON 파일을 수정하여 변경할 수 있습니다. 각 JSON 파일은 TypeScript 타입 정의(`src/types/`)와 매칭되어 타입 안정성을 보장합니다.
 
 ### 1. 자기소개 섹션 수정
 
-**파일 위치**: `src/data/aboutMe.json`
+**파일 위치**: `src/data/aboutMe.json`  
+**타입 정의**: `src/types/aboutMe.ts`
+
+#### JSON 구조와 타입 매칭:
+
+```typescript
+// src/types/aboutMe.ts
+export interface AboutMeType {
+  name: string              // 이름
+  profileImg: string        // 프로필 이미지 경로
+  job: string               // 직무
+  githubLink: string        // GitHub 링크
+  email: string             // 이메일
+  introductions: string[]   // 자기소개 문구 배열
+  achievements: Achievement[] // 성과/교육 이력
+}
+
+export interface Achievement {
+  type: "certification" | "education" | "award"  // 타입 (자격증/교육/수상)
+  title: string              // 제목
+  organization?: string      // 기관명 (선택)
+  date?: string              // 날짜 (선택)
+  description?: string       // 설명 (선택)
+}
+```
 
 #### 수정 방법:
 
@@ -96,7 +191,22 @@ npm start
 
 ### 2. 역량 섹션 수정
 
-**파일 위치**: `src/data/competency.json`
+**파일 위치**: `src/data/competency.json`  
+**타입 정의**: `src/types/competency.ts`
+
+#### JSON 구조와 타입 매칭:
+
+```typescript
+// src/types/competency.ts
+export interface CompetencyData {
+  competencies: CompetencyType[]
+}
+
+export interface CompetencyType {
+  title: string        // 역량 제목
+  description: string  // 역량 설명
+}
+```
 
 #### 수정 방법:
 
@@ -150,7 +260,30 @@ npm start
 
 ### 3. 기술 스택 섹션 수정
 
-**파일 위치**: `src/data/skills.json`
+**파일 위치**: `src/data/skills.json`  
+**타입 정의**: `src/types/competency.ts` (SkillType)
+
+#### JSON 구조와 타입 매칭:
+
+```typescript
+// src/types/competency.ts
+export interface SkillData {
+  skills: SkillType[]
+}
+
+export interface SkillType {
+  src: string         // 로고 이미지 경로
+  alt: string         // 이미지 대체 텍스트
+  status: string      // 카테고리 (Frontend, Backend, DevOps, Tools)
+  proficiency: number  // 숙련도 (0-100)
+}
+```
+
+**중요**: `status` 필드는 다음 중 하나여야 합니다:
+- `"Frontend"` - 프론트엔드 기술
+- `"Backend"` - 백엔드 기술
+- `"DevOps"` - DevOps 도구
+- `"Tools"` - 협업 도구
 
 #### 수정 방법:
 
@@ -202,7 +335,45 @@ npm start
 
 ### 4. 프로젝트 섹션 수정
 
-**파일 위치**: `src/data/project.json`
+**파일 위치**: `src/data/project.json`  
+**타입 정의**: `src/types/project.ts`
+
+#### JSON 구조와 타입 매칭:
+
+```typescript
+// src/types/project.ts
+export interface ProjectData {
+  project: Project[]
+}
+
+export interface Project {
+  id: number                    // 고유 ID (필수)
+  title: string                 // 프로젝트 제목 (형식: "제목 (부제목)")
+  description: string           // 프로젝트 설명
+  team: string                  // 팀 구성
+  role: string                  // 본인의 역할
+  period: string                // 프로젝트 기간
+  projectImage: ImgType[]       // 프로젝트 이미지 배열
+  projectDescription: ProjectDescription[] // 상세 설명 배열
+  techLogos: ImgType[]          // 기술 스택 로고 배열
+  githubLink: string            // GitHub 링크
+}
+
+export interface ProjectDescription {
+  id: number      // 설명 항목 ID
+  title: string   // 설명 제목
+  content: string  // 설명 내용 (\n으로 줄바꿈 가능)
+}
+
+export interface ImgType {
+  src: string  // 이미지 경로
+  alt: string  // 이미지 대체 텍스트
+}
+```
+
+**프로젝트 제목 형식**:  
+제목에 괄호를 사용하면 자동으로 부제목으로 분리됩니다.
+- `"ZipOn (부동산 경매 플랫폼)"` → 제목: "ZipOn", 부제목: "부동산 경매 플랫폼"
 
 #### 수정 방법:
 
@@ -442,10 +613,90 @@ Portfolio/
 
 ---
 
+## 🔗 JSON 파일과 컴포넌트 매칭 구조
+
+### 데이터 흐름
+
+```
+JSON 파일 (src/data/)
+    ↓
+TypeScript 타입 (src/types/)
+    ↓
+React 컴포넌트 (src/components/)
+    ↓
+페이지 (src/app/page.tsx)
+```
+
+### 구체적인 매칭 예시
+
+#### 1. 자기소개 데이터 흐름
+
+```typescript
+// 1. JSON 파일 읽기
+import aboutMeData from '@/data/aboutMe.json'
+
+// 2. 타입으로 변환
+const aboutMeInfo: AboutMeType = {
+  name: aboutMeData.name,
+  profileImg: aboutMeData.profileImg,
+  // ...
+}
+
+// 3. 컴포넌트에 전달
+<IntroView aboutMeData={aboutMeInfo} />
+```
+
+#### 2. 프로젝트 데이터 흐름
+
+```typescript
+// 1. JSON 파일 읽기
+import projectData from '@/data/project.json'
+
+// 2. 타입으로 변환
+const projects: Project[] = projectData.project as Project[]
+
+// 3. 컴포넌트에 전달
+<ProjectListView projects={projects} />
+```
+
+### JSON 파일 수정 시 자동 반영
+
+1. **개발 모드**: 파일 저장 시 자동으로 반영됩니다 (Hot Reload)
+2. **프로덕션 모드**: 빌드 시 JSON 파일이 번들에 포함됩니다
+3. **타입 체크**: TypeScript가 JSON 구조를 검증합니다
+
+### JSON 파일 수정 팁
+
+#### ✅ 올바른 예시
+```json
+{
+  "name": "홍길동",
+  "introductions": [
+    "첫 번째 문구",
+    "두 번째 문구"
+  ]
+}
+```
+
+#### ❌ 잘못된 예시
+```json
+{
+  "name": "홍길동",  // ← 마지막에 쉼표 있으면 안됨
+  "introductions": [
+    "첫 번째 문구",
+    "두 번째 문구",  // ← 마지막 항목에 쉼표 있으면 안됨
+  ]
+}
+```
+
+---
+
 ## 📝 주의사항
 
 1. **JSON 파일 형식**: JSON 파일을 수정할 때 쉼표(`,`)와 따옴표(`"`)를 정확히 입력하세요.
 2. **이미지 경로**: 모든 이미지 경로는 `public/` 폴더 기준으로 작성하세요. (예: `/images/project1.png`)
 3. **배열 추가**: 프로젝트나 기술 스택을 추가할 때는 배열 안에 새 객체를 추가하세요.
 4. **ID 중복**: 프로젝트의 `id`는 고유해야 합니다.
+5. **타입 일치**: JSON 파일의 구조가 `src/types/`의 타입 정의와 일치해야 합니다.
+6. **파일 저장**: JSON 파일 수정 후 저장하면 개발 서버에서 자동으로 반영됩니다.
 

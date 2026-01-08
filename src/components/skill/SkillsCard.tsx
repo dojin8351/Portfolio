@@ -1,4 +1,3 @@
-import { ImgType } from "@/types/common"
 import LogoIcon from "@/components/ui/LogoIcon"
 import React from "react"
 import { SkillType } from "@/types/competency"

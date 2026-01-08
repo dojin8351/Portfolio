@@ -240,3 +240,72 @@ h4 {
   color: rgba(255, 255, 200, 0.95);
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
 }
+
+/* Aristide Benoist 스타일 */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.aristide-ease {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 부드러운 뷰 전환을 위한 추가 스타일 */
+.view-transition {
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+}
+
+.view-transition.visible {
+  transition: opacity 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: auto;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up.delay-100 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-500 {
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-700 {
+  animation-delay: 0.7s;
+  opacity: 0;
+}

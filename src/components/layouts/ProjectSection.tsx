@@ -1,5 +1,5 @@
 import SectionLayout from "@/components/layouts/SectionLayout"
-import ProjectCard from "@/components/project/ProjectCard"
+import ProjectCardLegacy from "@/components/project/ProjectCardLegacy"
 import projectData from "@/data/project.json"
 import { ProjectData } from "@/types/project"
 import dynamic from "next/dynamic"
@@ -20,7 +20,7 @@ export default function ProjectSection() {
       >
         <div className={"mt-5 flex flex-col gap-7"}>
           {data.project.map((project, id) => (
-            <ProjectCard key={id} projectInfo={project} />
+            <ProjectCardLegacy key={id} projectInfo={project} />
           ))}
         </div>
       </SectionLayout>
